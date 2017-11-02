@@ -22,8 +22,8 @@
     margin-top: 20px;
 }
 .row {
-    margin-right: -10px;
-    margin-left: -10px;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
 }
 .right_col {
     float: right;
@@ -66,6 +66,16 @@ body {
     width: 35%;
     float: left;
 }
+.img-circle.profile_img {
+    width: 70%;
+    background: #fff;
+    margin-left: 15%;
+    z-index: 1000;
+    position: inherit;
+    margin-top: 20px;
+    border: 1px solid rgba(52,73,94,.44);
+    padding: 4px;
+}
 .profile_info {
     padding: 25px 10px 10px;
     width: 65%;
@@ -80,10 +90,16 @@ body {
 .menu_section>ul {
     margin-top: 10px;
 }
-.nav {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
+/*.nav {*/
+    /*padding-left: 0;*/
+    /*margin-bottom: 0;*/
+    /*list-style: none;*/
+/*}*/
+.toggle {
+    float: left;
+    margin: 0;
+    padding-top: 16px;
+    width: 70px;
 }
 .x_panel {
     width: 100%;
@@ -107,6 +123,7 @@ body {
 .x_content {
     padding: 0 5px 6px;
     float: left;
+    width: 90%;
     clear: both;
     margin-top: 5px;
 }
@@ -121,4 +138,72 @@ body {
     display: block;
     float: right;
     width: 75%;
+}
+.top_nav .navbar-right {
+    margin: 0;
+    width: 78%;
+    float: right;
+}
+.nav.navbar-nav>li>a {
+    color: #515356!important;
+}
+.user-profile img {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+ul.bar_tabs>li.active {
+    border-right: 6px solid #d3d6da;
+    border-top: 0;
+    margin-top: -15px;
+}
+ul.bar_tabs {
+    overflow: visible;
+    /*background: #f5f7fa;*/
+    height: 25px;
+    margin: 21px 0 14px;
+    padding-left: 14px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-bottom: 1px solid #e6e9ed;
+}
+ul.bar_tabs>li {
+    border: 1px solid #e6e9ed;
+    color: #333!important;
+    margin-top: -17px;
+    margin-left: 8px;
+    background: #fff;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+}
+ul.bar_tabs>li a {
+    padding: 10px 17px !important;
+    background: #f5f7fa;
+    margin: 0px;
+    border-top-right-radius: 0;
+}
+
+.tile_count .tile_stats_count .count {
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 600;
+}
+.green {
+    color: #1abb9c;
+}
+
+@media (min-width: 992px){
+    .col-md-2 {
+        width: 20% !important;
+    }
+}
+
+@media (min-width: 768px){
+
+    .tile_count .tile_stats_count .count {
+        font-size: 40px;
+    }
+
 }

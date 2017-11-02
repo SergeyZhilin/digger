@@ -5,14 +5,13 @@ namespace app\controllers;
 use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
-use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignupForm;
 
-class SiteController extends Controller
+class SiteController extends MainController
 {
     /**
      * @inheritdoc
@@ -142,9 +141,8 @@ class SiteController extends Controller
             $user->username = $model->username;
             $user->email = $model->email;
             $user->password = \Yii::$app->security->generatePasswordHash($model->password);
-//            echo '<pre>'; print_r($user); die;
             if($user->save()){
-                return $this->render('office');
+                return $this->render('login');
             }
         }
 
@@ -160,4 +158,105 @@ class SiteController extends Controller
     {
         return$this->render('office');
     }
+
+    /**
+     * Display deposits page.
+     *
+     * @return string
+     */
+    public function actionDeposits()
+    {
+        return$this->render('deposits');
+    }
+
+    /**
+     * Display operations page.
+     *
+     * @return string
+     */
+    public function actionOperations()
+    {
+        return$this->render('operations');
+    }
+
+    /**
+     * Display payin page.
+     *
+     * @return string
+     */
+    public function actionPayin()
+    {
+        return$this->render('payin');
+    }
+
+    /**
+     * Display payout page.
+     *
+     * @return string
+     */
+    public function actionPayout()
+    {
+        return$this->render('payout');
+    }
+
+    /**
+     * Display profile page.
+     *
+     * @return string
+     */
+    public function actionProfile()
+    {
+        return$this->render('profile');
+    }
+
+    /**
+     * Display refsys page.
+     *
+     * @return string
+     */
+    public function actionRefsys()
+    {
+        return$this->render('refsys');
+    }
+
+    /**
+     * Display account page.
+     *
+     * @return string
+     */
+    public function actionAccount()
+    {
+        return$this->render('account');
+    }
+
+    /**
+     * Display changepass page.
+     *
+     * @return string
+     */
+    public function actionChangepass()
+    {
+        return$this->render('changepass');
+    }
+
+    /**
+     * Display payments page.
+     *
+     * @return string
+     */
+    public function actionPayments()
+    {
+        return$this->render('payments');
+    }
+
+    /**
+     * Display pin page.
+     *
+     * @return string
+     */
+    public function actionPin()
+    {
+        return$this->render('pin');
+    }
+
 }

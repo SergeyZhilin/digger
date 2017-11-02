@@ -1,8 +1,12 @@
 <?php
-//use \yii\widgets\ActiveForm;
 
 $this->title = 'Office';
 $this->params['breadcrumbs'][] = $this->title;
+
+if(Yii::$app->user->isGuest) {
+    return Yii::$app->response->redirect('login');
+}
+
 ?>
 
     <div class="container body">
@@ -11,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
                         <a href="#" class="site_title">
-                            <img src="/images/logocab.png" alt="">
-                            <span>Alt Trade</span>
+                            <img src="/web/diggerstyle/images/logo-icon.png" alt="">
+                            <span>Your Site</span>
                         </a>
                     </div>
 
@@ -21,11 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                            <img src="/images/user.png" alt="avatar" class="img-circle profile_img">
+                            <img src="/web/images/user.png" alt="avatar" class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h2>mila</h2>
+                            <span>Добро пожаловать,</span>
+                            <h2><?= $this->context->username; ?></h2>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -38,58 +42,48 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="menu_section active">
                             <ul class="nav side-menu" style="">
                                 <li class="active  current-page">
-                                    <a href="#">
+                                    <a href="/office">
                                         <i class="fa fa-home fa-fw"></i>Кабинет
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="/deposits">
                                         <i class="fa fa-bank fa-fw"></i>Мои инвестиции
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="/payin">
                                         <i class="fa fa-briefcase fa-fw"></i>Пополнить баланс
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="/payout">
                                         <i class="fa fa-refresh fa-fw"></i>Вывод средств
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="/operations">
                                         <i class="fa fa-calendar fa-fw"></i>История операций
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="#">
+                                    <a href="/refsys">
                                         <i class="fa fa-users fa-fw"></i>Партнерская программа
                                     </a>
                                 </li>
+<!--                                <li class="">-->
+<!--                                    <a>-->
+<!--                                        <i class="fa fa-paper-plane-o fa-fw" aria-hidden="true"></i>Рекламные материалы-->
+<!--                                    </a>-->
+<!--                                    <ul class="nav child_menu">-->
+<!--                                        <li><a href="#">Лендинги</a></li>-->
+<!--                                        <li><a href="#">Баннеры</a></li>-->
+<!--                                        <li><a href="#">Презентация</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
                                 <li class="">
-                                    <a href="#">
-                                        <i class="fa fa-signal fa-fw"></i>Карьера
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a>
-                                        <i class="fa fa-paper-plane-o fa-fw" aria-hidden="true"></i>Рекламные материалы
-                                    </a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="#">Лендинги</a></li>
-                                        <li><a href="#">Баннеры</a></li>
-                                        <li><a href="#">Презентация</a></li>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a href="#">
+                                    <a href="/profile">
                                         <i class="fa fa-user fa-fw"></i>Профиль
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-question fa-fw"></i>FAQ
                                     </a>
                                 </li>
                                 <li>
@@ -107,16 +101,13 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="top_nav">
                 <div class="nav_menu">
                     <nav>
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
 
                         <ul class="nav navbar-nav navbar-right">
 
                             <li>
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="/images/user.png" alt="avatar">
-                                    mila
+                                    <img src="/web/images/user.png" alt="avatar">
+                                    <?= $this->context->username; ?>
                                     <span class=" fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -125,18 +116,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </ul>
                             </li>
                             <li>
-                                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="text-transform: uppercase; cursor: pointer;">
-                                    ru <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Русский</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a style="min-width: 550px" class="pull-right"><span class="pull-left">Ваша партнерская ссылка:&nbsp;</span><div class="input-group" style="margin: 0; max-width: 350px">
                                         <div class="input-group-addon"><i class="fa fa-group fa-fw"></i></div>
-                                        <input type="text" id="referalUrl" name="ref-link" value="https://alt-trade.com/?ref=simply87" class="form-control" onclick="select()" style="background: #ccc; border-top-right-radius: 3px; border-bottom-right-radius: 3px">
+                                        <input type="text" id="referalUrl" name="ref-link" value="https://yoursite/?ref=simply87" class="form-control" onclick="select()" style="background: #ccc; border-top-right-radius: 3px; border-bottom-right-radius: 3px">
                                     </div></a>
 
                             </li>
@@ -144,7 +126,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     </nav>
                 </div>
-            </div><div class="right_col" role="main" style="min-height: 819px;"><div class="row tile_count">
+            </div>
+            <div class="right_col" role="main" style="min-height: 819px;">
+                <div class="row tile_count">
                     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                         <span class="count_top"><i class="fa fa-balance-scale"></i> Баланс</span>
                         <div class="count green">
@@ -159,9 +143,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         <span class="count_top"><i class="fa fa-clock-o"></i> Вклад</span>
                         <div class="count">
                             <div class="amount">
-                                $0
+                                <?= '$'.$this->context->payin; ?>
                                 <br>
-                                <span>฿</span>0
+                                <span><?= '฿'.$this->context->bit_price_in; ?></span>
                             </div>
                         </div>
                     </div>
@@ -169,9 +153,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         <span class="count_top"><i class="fa fa-money"></i> Доход с депозита</span>
                         <div class="count">
                             <div class="amount">
-                                $0
+                                <?= '$'.$this->context->in_fr_deposit; ?>
                                 <br>
-                                <span>฿</span>0
+                                <span><?= '฿'.$this->context->bit_price_dep; ?></span>
                             </div>
                         </div>
                     </div>
@@ -189,18 +173,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         <span class="count_top"><i class="fa fa-user"></i> Выведено</span>
                         <div class="count">
                             <div class="amount">
-                                $0
+                                <?= '$'.$this->context->payout; ?>
                                 <br>
-                                <span>฿</span>0
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                        <span class="count_top"><i class="fa fa-user"></i> Оборот</span>
-                        <div class="count">
-                            <div class="amount">
-                                $0
-                                <br><br>
+                                <span><?= '฿'.$this->context->bit_price_out; ?></span>
                             </div>
                         </div>
                     </div>
