@@ -298,17 +298,19 @@ class SiteController extends MainController
         $modeluser = User::find()->where([
             'id'=>Yii::$app->user->identity->id
         ])->one();
+//        var_dump($modeluser); die;
         if($model->load(\Yii::$app->request->post()) && $model->validate()){
+
             $modeluser->perfectmoney = $_POST['PaymentsForm']['perfectmoney'];
             $modeluser->advancedcash = $_POST['PaymentsForm']['advancedcash'];
             $modeluser->bitcoin = $_POST['PaymentsForm']['bitcoin'];
-//              var_dump($modeluser); die;
+
 
             if($modeluser->save()){
-                return $this->render('payments');
+                return $this->render('payments', ['model'=>$model]);
             }
         }
-        return$this->render('payments');
+        return$this->render('payments', ['model'=>$model]);
     }
 
     /**

@@ -205,15 +205,19 @@ if(Yii::$app->user->isGuest) {
                     </ul>
                     <div class="col-md-6 col-xs-12">
 
-                        <?php $form = \yii\widgets\ActiveForm::begin() ?>
+                        <?php
+                        $form = \yii\widgets\ActiveForm::begin([
+                        'id' => 'payments-form',
+                        'options' => ['class' => 'form-horizontal'],
+                        ]) ?>
 
-                        <?//= $form->field($model,'advancedcash')->textInput() ?>
+                        <?= $form->field($model,'advancedcash')->textInput() ?>
 
 
-                        <?//= $form->field($model,'perfectmoney')->textInput() ?>
+                        <?= $form->field($model,'perfectmoney')->textInput() ?>
 
 
-                        <?//= $form->field($model,'bitcoin')->textInput()?>
+                        <?= $form->field($model,'bitcoin')->textInput()?>
 
                         <div class="form-group">
                             <div>
