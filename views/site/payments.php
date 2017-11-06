@@ -182,4 +182,49 @@ if(Yii::$app->user->isGuest) {
             </div>
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Платежные реквизиты</h2><div class="clearfix"></div></div><div class="x_content"><ul class="nav nav-tabs bar_tabs"><li role="presentation"><a href="/profile">Профиль</a></li><li role="presentation"><a href="/account">Безопасность</a></li><li role="presentation"><a href="/changepass">Изменить пароль</a></li><li role="presentation" class="active"><a href="/payments">Платежные реквизиты</a></li><li role="presentation"><a href="/pin">PIN-Code</a></li></ul><div class="col-md-6 col-xs-12"><form method="post" action="/balance/wallets" name="balance/wallets_frm"><div class="form-group"><label for="">Платежная система по-умолчанию</label><div class="block_form_el_right"><select name="DefCurr" id="balance/wallets_frm_DefCurr" class="form-control"><option value="0" selected="">- выбор -</option><option value="1" selected="selected">Advanced Cash</option><option value="4">Perfect Money</option><option value="5">Bitcoin</option><option value="6">Payeer</option></select></div></div><div class="form-group"><label for="">Advanced Cash</label><div class="block_form_el_right"><input name="AC[acc]" id="balance/wallets_frm_AC[acc]" value="" type="text" class="form-control"><small>sample@domain.zn</small></div></div><div class="form-group"><label for="">Perfect Money</label><div class="block_form_el_right"><input name="PM[acc]" id="balance/wallets_frm_PM[acc]" value="" type="text" class="form-control"><small>U1234567</small></div></div><div class="form-group"><label for="">Bitcoin</label><div class="block_form_el_right"><input name="IBC[acc]" id="balance/wallets_frm_IBC[acc]" value="" type="text" class="form-control"><small></small></div></div><div class="form-group"><label for="">Payeer</label><div class="block_form_el_right"><input name="PY[acc]" id="balance/wallets_frm_PY[acc]" value="" type="text" class="form-control"><small>P1234567</small></div></div><input name="__Cert" value="37a7378a" type="hidden"><input name="balance/wallets_frm_btn" value="Сохранить" type="submit" class="btn btn-info"></form></div></div><div class="clearfix"></div></div></div></div><!-- Bootstrap --><script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script><!-- FastClick --><script src="/vendors/fastclick/lib/fastclick.js"></script><!-- NProgress --><script src="/vendors/nprogress/nprogress.js"></script><script src="/vendors/bootstrap-fileinput/js/fileinput.min.js"></script><script src="/vendors/bootstrap-fileinput/js/locales/ru.js"></script><script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script><!-- Custom Theme Scripts --><script src="/build/js/custom.min.js"></script><script src="/js/main.js"></script><script src="/js/stacktable.js"></script><script src="/js/jivosite.js"></script><script>$(document).ready(function(e) {e.preventDefault();});$('#card-table').cardtable();</script></div>
+                    <h2>Платежные реквизиты</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <ul class="nav nav-tabs bar_tabs">
+                        <li role="presentation">
+                            <a href="/profile">Профиль</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/account">Безопасность</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/changepass">Изменить пароль</a>
+                        </li>
+                        <li role="presentation" class="active">
+                            <a href="/payments">Платежные реквизиты</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/pin">PIN-Code</a>
+                        </li>
+                    </ul>
+                    <div class="col-md-6 col-xs-12">
+
+                        <?php $form = \yii\widgets\ActiveForm::begin() ?>
+
+                        <?//= $form->field($model,'advancedcash')->textInput() ?>
+
+
+                        <?//= $form->field($model,'perfectmoney')->textInput() ?>
+
+
+                        <?//= $form->field($model,'bitcoin')->textInput()?>
+
+                        <div class="form-group">
+                            <div>
+                                <?= \yii\bootstrap\Html::submitButton('Далее', ['class' => 'btn btn-success']) ?>
+                            </div>
+                        </div>
+                        <?php \yii\widgets\ActiveForm::end() ?>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\PaymentsForm;
 use app\models\User;
 use Yii;
 use yii\db\Exception;
@@ -158,7 +159,7 @@ class SiteController extends MainController
     public function actionChangepass(){
         $model = new PasswordForm;
         $modeluser = User::find()->where([
-            'username'=>Yii::$app->user->identity->username
+            'id'=>Yii::$app->user->identity->id
         ])->one();
 //        var_dump($modeluser);
         if($model->load(Yii::$app->request->post())){
@@ -293,6 +294,20 @@ class SiteController extends MainController
      */
     public function actionPayments()
     {
+        $model = new PaymentsForm();
+        $modeluser = User::find()->where([
+            'id'=>Yii::$app->user->identity->id
+        ])->one();
+        if($model->load(\Yii::$app->request->post()) && $model->validate()){
+            $modeluser->perfectmoney = $_POST['PaymentsForm']['perfectmoney'];
+            $modeluser->advancedcash = $_POST['PaymentsForm']['advancedcash'];
+            $modeluser->bitcoin = $_POST['PaymentsForm']['bitcoin'];
+//              var_dump($modeluser); die;
+
+            if($modeluser->save()){
+                return $this->render('payments');
+            }
+        }
         return$this->render('payments');
     }
 

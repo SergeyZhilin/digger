@@ -201,11 +201,6 @@ if(Yii::$app->user->isGuest) {
                     </ul>
                     <div class="col-md-6 col-xs-12">
                         <div class="block_form">
-                            <?php
-
-                            //var_dump($this->context->users->password);
-
-                            ?>
                             <?php $form = \yii\widgets\ActiveForm::begin([
                                 'id'=>'changepassword-form',
                                 'options'=>['class'=>'form-horizontal'],
