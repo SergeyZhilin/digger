@@ -8,6 +8,7 @@ class PaymentsForm extends Model{
     public $advancedcash;
     public $perfectmoney;
     public $bitcoin;
+    public $default_pay;
 
     public function rules(){
         return [
@@ -22,6 +23,7 @@ class PaymentsForm extends Model{
             'advancedcash'  =>  'Advanced Cash',
             'perfectmoney'  =>  'Perfect Money',
             'bitcoin'       =>  'Bitcoin',
+            'default_pay'       =>  'Default',
         ];
     }
 }

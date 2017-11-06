@@ -199,7 +199,9 @@ ul.bar_tabs>li a {
     margin-left: 16%;
 }
 #changepassword-form label{
-    display: none;
+    /*display: none;*/
+    text-align: left;
+    width: 220px;
 }
 
 @media (min-width: 992px){

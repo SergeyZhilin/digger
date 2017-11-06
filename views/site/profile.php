@@ -227,31 +227,64 @@ if(Yii::$app->user->isGuest) {
                                     </div></div>
                             </div>
                         </form>
-                        <form action="/profile" method="post">
-                            <div class="form-group">
-                                <label>Ваше Имя:</label>
-                                <input type="text" name="name" value="" class="form-control">
-                            </div>
 
-                            <div class="form-group">
-                                <label>Ваша Фамилия:</label>
-                                <input type="text" name="lastname" value="" class="form-control">
-                            </div>
+                        <?php
+                        $form = \yii\widgets\ActiveForm::begin([
+                            'id' => 'profile-form',
+                            'options' => ['class' => 'form-horizontal'],
+                        ]) ?>
 
-                            <div class="form-group">
-                                <label>Ваш Логин:</label>
-                                <input type="text" value="<?= $this->context->username; ?>" class="form-control" readonly="">
-                            </div>
 
-                            <div class="form-group">
-                                <label>Адрес електронной почты:</label>
-                                <input type="text" value="<?= $this->context->users->email; ?>" class="form-control" readonly="">
-                            </div>
+                        <?= $form->field($model,'name',['inputOptions'=>[
+                            'value'=> $this->context->users->name
+                        ]])->textInput() ?>
 
-                            <div class="form-group">
-                                <button class="btn btn-info" type="submit" name="profile">Сохранить</button>
+
+                        <?= $form->field($model,'surname', ['inputOptions'=>[
+                            'value'=> $this->context->users->surname
+                        ]])->textInput() ?>
+
+
+                        <?= $form->field($model,'username', ['inputOptions'=>[
+                            'readonly'=> true, 'value'=> $this->context->users->username
+                        ]])->textInput()?>
+
+
+                        <?= $form->field($model,'email', ['inputOptions'=>[
+                            'readonly'=> true, 'value'=> $this->context->users->email
+                        ]])->textInput()?>
+
+                        <div class="form-group">
+                            <div>
+                                <?= \yii\bootstrap\Html::submitButton('Далее', ['class' => 'btn btn-success']) ?>
                             </div>
-                        </form>
+                        </div>
+                        <?php \yii\widgets\ActiveForm::end() ?>
+<!--                        <form action="/profile" method="post">-->
+<!--                            <div class="form-group">-->
+<!--                                <label>Ваше Имя:</label>-->
+<!--                                <input type="text" name="name" value="" class="form-control">-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="form-group">-->
+<!--                                <label>Ваша Фамилия:</label>-->
+<!--                                <input type="text" name="lastname" value="" class="form-control">-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="form-group">-->
+<!--                                <label>Ваш Логин:</label>-->
+<!--                                <input type="text" value="--><?//= $this->context->username; ?><!--" class="form-control" readonly="">-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="form-group">-->
+<!--                                <label>Адрес електронной почты:</label>-->
+<!--                                <input type="text" value="--><?//= $this->context->users->email; ?><!--" class="form-control" readonly="">-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="form-group">-->
+<!--                                <button class="btn btn-info" type="submit" name="profile">Сохранить</button>-->
+<!--                            </div>-->
+<!--                        </form>-->
                     </div>
                 </div>
             </div>

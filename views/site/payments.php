@@ -211,13 +211,26 @@ if(Yii::$app->user->isGuest) {
                         'options' => ['class' => 'form-horizontal'],
                         ]) ?>
 
-                        <?= $form->field($model,'advancedcash')->textInput() ?>
+                        <?= $form->field($model, 'default_pay')->dropDownList([
+                                '0' => 'Advanced Cash',
+                                '1' => 'Perfect Money',
+                                '2' => 'Bitcoin',
+                        ])?>
 
 
-                        <?= $form->field($model,'perfectmoney')->textInput() ?>
+                        <?= $form->field($model,'advancedcash',['inputOptions'=>[
+                            'placeholder'=>'sample@domain.zn', 'value'=> $this->context->users->advancedcash
+                        ]])->textInput() ?>
 
 
-                        <?= $form->field($model,'bitcoin')->textInput()?>
+                        <?= $form->field($model,'perfectmoney', ['inputOptions'=>[
+                            'placeholder'=>'U1234567', 'value'=> $this->context->users->perfectmoney
+                        ]])->textInput() ?>
+
+
+                        <?= $form->field($model,'bitcoin', ['inputOptions'=>[
+                            'placeholder'=>'', 'value'=> $this->context->users->bitcoin
+                        ]])->textInput()?>
 
                         <div class="form-group">
                             <div>

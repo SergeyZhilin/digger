@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\PaymentsForm;
+use app\models\ProfileForm;
 use app\models\User;
 use Yii;
 use yii\db\Exception;
@@ -254,7 +255,24 @@ class SiteController extends MainController
      */
     public function actionProfile()
     {
-        return$this->render('profile');
+        $model = new ProfileForm();
+        $modeluser = User::find()->where([
+            'id'=>Yii::$app->user->identity->id
+        ])->one();
+//        var_dump($modeluser); die;
+        if($model->load(\Yii::$app->request->post()) && $model->validate()){
+
+            $modeluser->name = $_POST['ProfileForm']['name'];
+            $modeluser->surname = $_POST['ProfileForm']['surname'];
+//            $modeluser->username = $_POST['ProfileForm']['username'];
+//            $modeluser->email = $_POST['ProfileForm']['email'];
+
+
+            if($modeluser->save()){
+                return $this->render('profile', ['model'=>$model]);
+            }
+        }
+        return$this->render('profile', ['model'=>$model]);
     }
 
     /**
@@ -277,15 +295,6 @@ class SiteController extends MainController
         return$this->render('account');
     }
 
-    /**
-     * Display changepass page.
-     *
-     * @return string
-     */
-//    public function actionChangepass()
-//    {
-//        return$this->render('changepass');
-//    }
 
     /**
      * Display payments page.
@@ -304,6 +313,7 @@ class SiteController extends MainController
             $modeluser->perfectmoney = $_POST['PaymentsForm']['perfectmoney'];
             $modeluser->advancedcash = $_POST['PaymentsForm']['advancedcash'];
             $modeluser->bitcoin = $_POST['PaymentsForm']['bitcoin'];
+            $modeluser->default_pay = $_POST['PaymentsForm']['default_pay'];
 
 
             if($modeluser->save()){
