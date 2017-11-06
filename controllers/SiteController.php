@@ -4,12 +4,14 @@ namespace app\controllers;
 
 use app\models\User;
 use Yii;
+use yii\db\Exception;
 use yii\filters\AccessControl;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignupForm;
+use app\models\PasswordForm;
 
 class SiteController extends MainController
 {
@@ -78,7 +80,7 @@ class SiteController extends MainController
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect('office');
         }
         return $this->render('login', [
             'model' => $model,
@@ -132,7 +134,7 @@ class SiteController extends MainController
      */
     public function actionSignup(){
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->render('office');
         }
         $model = new SignupForm();
 
@@ -141,12 +143,57 @@ class SiteController extends MainController
             $user->username = $model->username;
             $user->email = $model->email;
             $user->password = \Yii::$app->security->generatePasswordHash($model->password);
+
             if($user->save()){
-                return $this->render('login');
+                return $this->render('office');
             }
         }
 
         return $this->render('signup', compact('model'));
+    }
+
+    /**
+     * ChangePassword
+     */
+    public function actionChangepass(){
+        $model = new PasswordForm;
+        $modeluser = User::find()->where([
+            'username'=>Yii::$app->user->identity->username
+        ])->one();
+//        var_dump($modeluser);
+        if($model->load(Yii::$app->request->post())){
+            if($model->validate()){
+                try{
+                    $modeluser->password = \Yii::$app->security->generatePasswordHash($_POST['PasswordForm']['newpass']);
+                    if($modeluser->save()){
+                        Yii::$app->getSession()->setFlash(
+                            'success','Password changed'
+                        );
+                        return $this->redirect(['changepass']);
+                    }else{
+                        Yii::$app->getSession()->setFlash(
+                            'error','Password not changed'
+                        );
+                        return $this->redirect(['changepass']);
+                    }
+                }catch(Exception $e){
+                    Yii::$app->getSession()->setFlash(
+                        'error',"{$e->getMessage()}"
+                    );
+                    return $this->render('changepass',[
+                        'model'=>$model
+                    ]);
+                }
+            }else{
+                return $this->render('changepass',[
+                    'model'=>$model
+                ]);
+            }
+        }else{
+            return $this->render('changepass',[
+                'model'=>$model
+            ]);
+        }
     }
 
     /**
@@ -234,10 +281,10 @@ class SiteController extends MainController
      *
      * @return string
      */
-    public function actionChangepass()
-    {
-        return$this->render('changepass');
-    }
+//    public function actionChangepass()
+//    {
+//        return$this->render('changepass');
+//    }
 
     /**
      * Display payments page.

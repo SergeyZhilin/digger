@@ -47,7 +47,9 @@ AppAsset::register($this);
                     ['label' => 'English', 'url' => 'lang=en'],
                 ],
                 ],
-            ['label' => 'Registration', 'url' => ['/site/signup']],
+            Yii::$app->user->isGuest ? (
+            ['label' => 'Registration', 'url' => ['/site/signup']]
+            ):(['label' => 'Personal Area', 'url' => ['/site/office']]),
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (

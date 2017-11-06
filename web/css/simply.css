@@ -193,6 +193,14 @@ ul.bar_tabs>li a {
 .green {
     color: #1abb9c;
 }
+#changepassword-form input{
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 16%;
+}
+#changepassword-form label{
+    display: none;
+}
 
 @media (min-width: 992px){
     .col-md-2 {

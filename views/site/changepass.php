@@ -182,4 +182,66 @@ if(Yii::$app->user->isGuest) {
             <div class="x_panel">
                 <div class="x_title">
                     <h2>Изменить пароль</h2>
-                    <div class="clearfix"></div></div><div class="x_content"><ul class="nav nav-tabs bar_tabs"><li role="presentation"><a href="/profile">Профиль</a></li><li role="presentation"><a href="/account">Безопасность</a></li><li role="presentation" class="active"><a href="/changepass">Изменить пароль</a></li><li role="presentation"><a href="/payments">Платежные реквизиты</a></li><li role="presentation"><a href="/pin">PIN-Code</a></li></ul><div class="col-md-6 col-xs-12"><div class="block_form"><form method="post" action="changepass" name="account/change_pass_frm"><div class="form-group"><label for="login_frm_Pass0">Старый пароль <span class="descr_star">*</span></label><div class="block_form_el_right"><input name="Pass0" id="login_frm_Pass0" value="" type="password" class="form-control"></div></div><div class="form-group"><label for="login_frm_Pass">Новый пароль <span class="descr_star">*</span></label><div class="block_form_el_right"><input name="Pass" id="login_frm_Pass" value="" type="password" class="form-control"></div></div><div class="form-group"><label for="login_frm_Pass2">Повторите пароль <span class="descr_star">*</span></label><div class="block_form_el_right"><input name="Pass2" id="login_frm_Pass2" value="" type="password" class="form-control"></div></div><input name="__Cert" value="b2f3298d" type="hidden"><div class="form-group"><label for="login_frm_Pass">&nbsp;</label><div class="block_form_el_right"><input name="account/change_pass_frm_btn" value="Изменить" type="submit" class="btn btn-info"></div></div></form></div></div></div></div><div class="clearfix"></div></div></div></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <ul class="nav nav-tabs bar_tabs">
+                        <li role="presentation">
+                        <a href="/profile">Профиль</a></li>
+                        <li role="presentation">
+                            <a href="/account">Безопасность</a></li>
+                        <li role="presentation" class="active">
+                            <a href="/changepass">Изменить пароль</a>
+                        </li><li role="presentation">
+                            <a href="/payments">Платежные реквизиты</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/pin">PIN-Code</a>
+                        </li>
+                    </ul>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="block_form">
+                            <?php
+
+                            //var_dump($this->context->users->password);
+
+                            ?>
+                            <?php $form = \yii\widgets\ActiveForm::begin([
+                                'id'=>'changepassword-form',
+                                'options'=>['class'=>'form-horizontal'],
+                                'fieldConfig'=>[
+                                    'template'=>"{label}\n<div class=\"col-lg-3\">
+                        {input}</div>\n<div class=\"col-lg-5\">
+                        {error}</div>",
+                                    'labelOptions'=>['class'=>'col-lg-2 control-label'],
+                                ],
+                            ]); ?>
+
+                            <?= $form->field($model,'oldpass',['inputOptions'=>[
+                                'placeholder'=>'Старый Пароль'
+                            ]])->passwordInput() ?>
+
+                            <?= $form->field($model,'newpass',['inputOptions'=>[
+                                'placeholder'=>'Новый Пароль'
+                            ]])->passwordInput() ?>
+
+                            <?= $form->field($model,'repeatnewpass',['inputOptions'=>[
+                                'placeholder'=>'Повторите Новый Пароль'
+                            ]])->passwordInput() ?>
+
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-11">
+                                    <?= \yii\bootstrap\Html::submitButton('Изменить',[
+                                        'class'=>'btn btn-primary'
+                                    ]) ?>
+                                </div>
+                            </div>
+                            <?php \yii\widgets\ActiveForm::end(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
