@@ -12,6 +12,7 @@ class MainController extends Controller
      */
     public $users;
     public $user_id;
+    public $image;
     public $username;
     public $payin = 0;
     public $payout = 0;
@@ -21,6 +22,7 @@ class MainController extends Controller
     public $bit_price_dep;
     public $bit_prices;
     public $payments;
+    public $path;
 
     public function beforeAction($action)
     {
@@ -33,6 +35,8 @@ class MainController extends Controller
         if (isset($this->users)){
             $this->user_id = $this->users->id;
             $this->username = $this->users->username;
+            $this->image = $this->users->image;
+            $this->path = '/web/uploads/';
         }
         $this->bit_prices = \app\models\Digger::findOne(1);
 

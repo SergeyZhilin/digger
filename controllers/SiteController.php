@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\PaymentsForm;
 use app\models\ProfileForm;
+use app\models\UploadForm;
 use app\models\User;
 use Yii;
 use yii\db\Exception;
@@ -14,6 +15,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignupForm;
 use app\models\PasswordForm;
+use yii\web\UploadedFile;
 
 class SiteController extends MainController
 {
@@ -162,7 +164,6 @@ class SiteController extends MainController
         $modeluser = User::find()->where([
             'id'=>Yii::$app->user->identity->id
         ])->one();
-//        var_dump($modeluser);
         if($model->load(Yii::$app->request->post())){
             if($model->validate()){
                 try{
@@ -259,11 +260,17 @@ class SiteController extends MainController
         $modeluser = User::find()->where([
             'id'=>Yii::$app->user->identity->id
         ])->one();
-//        var_dump($modeluser); die;
         if($model->load(\Yii::$app->request->post()) && $model->validate()){
 
             $modeluser->name = $_POST['ProfileForm']['name'];
             $modeluser->surname = $_POST['ProfileForm']['surname'];
+
+            $model->image = UploadedFile::getInstance($model, 'image');
+
+            if ($model->upload()) {
+                // file is uploaded successfully
+                $modeluser->image = $model->image->name;
+            }
 //            $modeluser->username = $_POST['ProfileForm']['username'];
 //            $modeluser->email = $_POST['ProfileForm']['email'];
 

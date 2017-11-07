@@ -23,7 +23,7 @@ if(Yii::$app->user->isGuest) {
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="/web/images/user.png" alt="avatar" class="img-circle profile_img">
+                        <img src="<?= $this->context->path.$this->context->image?>" alt="avatar" class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
@@ -104,7 +104,7 @@ if(Yii::$app->user->isGuest) {
 
                         <li>
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="/web/images/user.png" alt="avatar">
+                                <img src="<?= $this->context->path.$this->context->image?>" alt="avatar">
                                 <?= $this->context->username; ?>
                                 <span class=" fa fa-angle-down"></span>
                             </a>
@@ -196,43 +196,21 @@ if(Yii::$app->user->isGuest) {
                         <div class="profile_img">
                             <div id="crop-avatar">
                                 <!-- Current avatar -->
-                                <img class="img-responsive avatar-view center-block" src="/web/images/user.png" alt="Avatar" title="Change the avatar">
+
+                                    <img style="width: 200px; height: 200px;" class="img-responsive avatar-view center-block" src="<?= $this->context->path.$this->context->image?>" alt="Avatar" title="Change the avatar">
+
                             </div>
                         </div>
                         <br>
-                        <form method="post" action="/profile" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label>Выберите фотографию:</label>
-                                <div class="file-input file-input-new">
-                                    <div class="kv-upload-progress hide"><div class="progress">
-                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
-                                                0%
-                                            </div>
-                                        </div></div>
-                                    <div class="input-group file-caption-main">
-                                        <div tabindex="500" class="form-control file-caption  kv-fileinput-caption">
-                                            <div class="file-caption-name"></div>
-                                        </div>
-
-                                        <div class="input-group-btn">
-<!--                                            <button type="button" tabindex="500" title="Очистить выбранные файлы" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i>  <span class="hidden-xs">Удалить</span></button>-->
-<!--                                            <button type="button" tabindex="500" title="Отменить текущую загрузку" class="btn btn-default hide fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i>  <span class="hidden-xs">Отмена</span></button>-->
-<!--                                            <button type="submit" tabindex="500" title="Загрузить выбранные файлы" class="btn btn-default fileinput-upload fileinput-upload-button"><i class="glyphicon glyphicon-upload"></i>  <span class="hidden-xs">Загрузить</span></button>-->
-                                            <div tabindex="500" style="height: 34px" class="btn btn-primary btn-file">
-                                                <i class="glyphicon glyphicon-folder-open"></i>&nbsp;
-                                                <span class="hidden-xs">Выбрать …</span>
-                                                <input id="logo-uploader-ru" style="display: none" type="file" name="logo">
-                                            </div>
-                                        </div>
-                                    </div></div>
-                            </div>
-                        </form>
 
                         <?php
                         $form = \yii\widgets\ActiveForm::begin([
                             'id' => 'profile-form',
-                            'options' => ['class' => 'form-horizontal'],
+                            'options' => ['class' => 'form-horizontal', 'enctype' => 'multipart/form-data'],
+
                         ]) ?>
+
+                        <?= $form->field($model, 'image')->fileInput() ?>
 
 
                         <?= $form->field($model,'name',['inputOptions'=>[
@@ -260,35 +238,10 @@ if(Yii::$app->user->isGuest) {
                             </div>
                         </div>
                         <?php \yii\widgets\ActiveForm::end() ?>
-<!--                        <form action="/profile" method="post">-->
-<!--                            <div class="form-group">-->
-<!--                                <label>Ваше Имя:</label>-->
-<!--                                <input type="text" name="name" value="" class="form-control">-->
-<!--                            </div>-->
-<!---->
-<!--                            <div class="form-group">-->
-<!--                                <label>Ваша Фамилия:</label>-->
-<!--                                <input type="text" name="lastname" value="" class="form-control">-->
-<!--                            </div>-->
-<!---->
-<!--                            <div class="form-group">-->
-<!--                                <label>Ваш Логин:</label>-->
-<!--                                <input type="text" value="--><?//= $this->context->username; ?><!--" class="form-control" readonly="">-->
-<!--                            </div>-->
-<!---->
-<!--                            <div class="form-group">-->
-<!--                                <label>Адрес електронной почты:</label>-->
-<!--                                <input type="text" value="--><?//= $this->context->users->email; ?><!--" class="form-control" readonly="">-->
-<!--                            </div>-->
-<!---->
-<!--                            <div class="form-group">-->
-<!--                                <button class="btn btn-info" type="submit" name="profile">Сохранить</button>-->
-<!--                            </div>-->
-<!--                        </form>-->
                     </div>
                 </div>
             </div>
-
-            <script src="/js/profile.js"></script>
-
-            <div class="clearfix"></div></div></div></div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
