@@ -218,7 +218,7 @@ if(Yii::$app->user->isGuest) {
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-11">
                                     <?= \yii\bootstrap\Html::submitButton('Сохранить',[
-                                        'class'=>'btn btn-primary'
+                                        'class'=>'btn btn-success'
                                     ]) ?>
                                 </div>
                             </div>

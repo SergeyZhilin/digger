@@ -13,8 +13,6 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
-//    public $userstatus = "user";
-//    private $fuser = false;
 
 
     public function rules()

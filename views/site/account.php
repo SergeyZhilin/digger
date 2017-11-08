@@ -227,7 +227,7 @@ if(Yii::$app->user->isGuest) {
                                 </div>
                                 <input name="__Cert" value="3c0f07da" type="hidden">
                                 <br>
-                                <input name="account_frm_btn" value="Сохранить" type="submit" class="btn btn-info">
+                                <input name="account_frm_btn" value="Сохранить" type="submit" class="btn btn-success">
                             </form>
                         </div>
                     </div>

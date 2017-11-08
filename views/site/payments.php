@@ -225,7 +225,7 @@ if(Yii::$app->user->isGuest) {
 
                         <div class="form-group">
                             <div>
-                                <?= \yii\bootstrap\Html::submitButton('Далее', ['class' => 'btn btn-success']) ?>
+                                <?= \yii\bootstrap\Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
                             </div>
                         </div>
                         <?php \yii\widgets\ActiveForm::end() ?>

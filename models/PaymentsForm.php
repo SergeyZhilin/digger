@@ -26,4 +26,12 @@ class PaymentsForm extends Model{
             'default_pay'       =>  'Default',
         ];
     }
+
+    public function save() {
+        $this->perfectmoney = $_POST['PaymentsForm']['perfectmoney'];
+        $this->advancedcash = $_POST['PaymentsForm']['advancedcash'];
+        $this->bitcoin = $_POST['PaymentsForm']['bitcoin'];
+        $this->default_pay = $_POST['PaymentsForm']['default_pay'];
+        return true;
+    }
 }

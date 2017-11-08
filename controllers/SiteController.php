@@ -4,7 +4,6 @@ namespace app\controllers;
 
 use app\models\PaymentsForm;
 use app\models\ProfileForm;
-use app\models\UploadForm;
 use app\models\User;
 use Yii;
 use yii\db\Exception;
@@ -260,20 +259,21 @@ class SiteController extends MainController
         $modeluser = User::find()->where([
             'id'=>Yii::$app->user->identity->id
         ])->one();
-        if($model->load(\Yii::$app->request->post()) && $model->validate()){
 
-            $modeluser->name = $_POST['ProfileForm']['name'];
-            $modeluser->surname = $_POST['ProfileForm']['surname'];
+        if($model->load(\Yii::$app->request->post()) && $model->validate()){
 
             $model->image = UploadedFile::getInstance($model, 'image');
 
             if ($model->upload()) {
-                // file is uploaded successfully
                 $modeluser->image = $model->image->name;
             }
-//            $modeluser->username = $_POST['ProfileForm']['username'];
-//            $modeluser->email = $_POST['ProfileForm']['email'];
 
+            if ($model->save()) {
+                $modeluser->name = $model->name;
+                $modeluser->surname = $model->surname;
+                $modeluser->username = $model->username;
+                $modeluser->email = $model->email;
+            }
 
             if($modeluser->save()){
                 return $this->render('profile', ['model'=>$model]);
@@ -314,14 +314,15 @@ class SiteController extends MainController
         $modeluser = User::find()->where([
             'id'=>Yii::$app->user->identity->id
         ])->one();
-//        var_dump($modeluser); die;
+
         if($model->load(\Yii::$app->request->post()) && $model->validate()){
 
-            $modeluser->perfectmoney = $_POST['PaymentsForm']['perfectmoney'];
-            $modeluser->advancedcash = $_POST['PaymentsForm']['advancedcash'];
-            $modeluser->bitcoin = $_POST['PaymentsForm']['bitcoin'];
-            $modeluser->default_pay = $_POST['PaymentsForm']['default_pay'];
-
+            if ($model->save()){
+                $modeluser->perfectmoney = $model->perfectmoney;
+                $modeluser->advancedcash = $model->advancedcash;
+                $modeluser->bitcoin = $model->bitcoin;
+                $modeluser->default_pay = $model->default_pay;
+            };
 
             if($modeluser->save()){
                 return $this->render('payments', ['model'=>$model]);
