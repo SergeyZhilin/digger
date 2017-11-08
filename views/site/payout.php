@@ -23,7 +23,7 @@ if(Yii::$app->user->isGuest) {
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="/web/images/user.png" alt="avatar" class="img-circle profile_img">
+                        <img src="<?= $this->context->path.$this->context->image?>" alt="avatar" class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
@@ -99,26 +99,17 @@ if(Yii::$app->user->isGuest) {
         <div class="top_nav">
             <div class="nav_menu">
                 <nav>
-
-                    <ul class="nav navbar-nav navbar-right">
-
+                    <ul class="nav navbar-nav navbar-right simply-nav">
                         <li>
-                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="/web/images/user.png" alt="avatar">
-                                <?= $this->context->username; ?>
-                                <span class=" fa fa-angle-down"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="/profile"> Profile</a></li>
-                                <li><a href="/login?out"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a style="min-width: 550px" class="pull-right"><span class="pull-left">Ваша партнерская ссылка:&nbsp;</span><div class="input-group" style="margin: 0; max-width: 350px">
-                                    <div class="input-group-addon"><i class="fa fa-group fa-fw"></i></div>
+                            <a style="min-width: 550px" class="pull-right">
+                                <span class="pull-left" style="margin-top: 5px">Ваша партнерская ссылка:&nbsp;</span>
+                                <div class="input-group" style="margin: 0; max-width: 350px">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-group fa-fw"></i>
+                                    </div>
                                     <input type="text" id="referalUrl" name="ref-link" value="https://yoursite/?ref=simply87" class="form-control" onclick="select()" style="background: #ccc; border-top-right-radius: 3px; border-bottom-right-radius: 3px">
-                                </div></a>
-
+                                </div>
+                            </a>
                         </li>
                     </ul>
 

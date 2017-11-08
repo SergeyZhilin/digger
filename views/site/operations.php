@@ -23,7 +23,7 @@ if(Yii::$app->user->isGuest) {
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="/web/images/user.png" alt="avatar" class="img-circle profile_img">
+                        <img src="<?= $this->context->path.$this->context->image?>" alt="avatar" class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
@@ -99,26 +99,17 @@ if(Yii::$app->user->isGuest) {
         <div class="top_nav">
             <div class="nav_menu">
                 <nav>
-
-                    <ul class="nav navbar-nav navbar-right">
-
+                    <ul class="nav navbar-nav navbar-right simply-nav">
                         <li>
-                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="/web/images/user.png" alt="avatar">
-                                <?= $this->context->username; ?>
-                                <span class=" fa fa-angle-down"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="/profile"> Profile</a></li>
-                                <li><a href="/login?out"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a style="min-width: 550px" class="pull-right"><span class="pull-left">Ваша партнерская ссылка:&nbsp;</span><div class="input-group" style="margin: 0; max-width: 350px">
-                                    <div class="input-group-addon"><i class="fa fa-group fa-fw"></i></div>
+                            <a style="min-width: 550px" class="pull-right">
+                                <span class="pull-left" style="margin-top: 5px">Ваша партнерская ссылка:&nbsp;</span>
+                                <div class="input-group" style="margin: 0; max-width: 350px">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-group fa-fw"></i>
+                                    </div>
                                     <input type="text" id="referalUrl" name="ref-link" value="https://yoursite/?ref=simply87" class="form-control" onclick="select()" style="background: #ccc; border-top-right-radius: 3px; border-bottom-right-radius: 3px">
-                                </div></a>
-
+                                </div>
+                            </a>
                         </li>
                     </ul>
 
@@ -180,4 +171,50 @@ if(Yii::$app->user->isGuest) {
             </div>
             <div class="row balance">
                 <div class="col-md-12">
-                    <div class="x_panel"><div class="x_title"><h2>История операций</h2><div class="clearfix"></div></div><div class="x_content"><script type="text/javascript" src="static/admin/js/lists.js"></script><form method="post" action="https://office.alt-trade.com/operations" name="opers_filter"><link rel="stylesheet" type="text/css" media="all" href="static/admin/js/jscalendar/calendar-blue.css" title="win2k-cold-1"><script type="text/javascript" src="static/admin/js/jscalendar/calendar.js"></script><script type="text/javascript" src="static/admin/js/jscalendar/calendar-ru.js"></script><script type="text/javascript" src="static/admin/js/jscalendar/calendar-setup.js"></script><div></div><table id="card-table" class="table table-striped jambo_table stacktable large-only"><thead><tr><th>Дата</th><th>Операция</th><th>Реферал</th><th>Платежная система</th><th>Расход</th><th>Приход на счет</th><th>Статус</th></tr></thead><tbody></tbody></table></form></div></div></div></div><div class="clearfix"></div></div></div></div>
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>История операций</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <form method="post" action="https://office.alt-trade.com/operations" name="opers_filter">
+                                <div></div>
+                                <table id="card-table" class="table table-striped jambo_table stacktable large-only">
+                                    <thead>
+                                    <tr>
+                                        <th>Дата</th>
+                                        <th>Операция</th>
+                                        <th>Реферал</th>
+                                        <th>Платежная система</th>
+                                        <th>Расход</th
+                                        ><th>Приход на счет</th
+                                        ><th>Статус</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>сегодня, 11:54</td>
+                                        <td>Пополнение</td>
+                                        <td></td>
+                                        <td>
+                                            <small>Advanced Cash</small>
+                                            <br>200.00
+                                            <small>USD</small>
+                                        </td>
+                                        <td></td>
+                                        <td>200.00
+                                            <small>USD</small>
+                                        </td>
+                                        <td>Подготовленный</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
