@@ -9,6 +9,9 @@ $config = [
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
     'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
         'yii2images' => [
             'class' => 'rico\yii2images\Module',
             //be sure, that permissions ok

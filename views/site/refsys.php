@@ -201,58 +201,58 @@ if(Yii::$app->user->isGuest) {
                                 </form>
                                 <div class="clearfix"></div>
                                 <div>
-                                    <table class=" table stacktable small-only">
-                                        <tbody>
-                                        <tr class="">
-                                            <td class="st-key">Пользователь</td>
-                                            <td class="st-val ">Пользователь</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td class="st-key">Email</td>
-                                            <td class="st-val ">Email</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td class="st-key">Дата регистрации</td>
-                                            <td class="st-val ">Дата регистрации</td>
-                                        </tr>
-                                            <tr class="">
-                                                <td class="st-key">Депозит USD</td>
-                                                <td class="st-val ">Депозит USD</td>
-                                            </tr>
-                                        <tr class="">
-                                            <td class="st-key">Депозит BTC</td>
-                                            <td class="st-val ">Депозит BTC</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td class="st-key">Сумма</td>
-                                            <td class="st-val ">Сумма</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <table class=" table stacktable small-only">
-                                        <tbody>
-                                        <tr class="">
-                                            <td class="st-key">Пользователь</td>
-                                            <td class="st-val tab opened">Уровень 1</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td class="st-key">Email</td>
-                                            <td class="st-val tab">Уровень 2</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td class="st-key">Дата регистрации</td>
-                                            <td class="st-val tab">Уровень 3</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td class="st-key">Депозит USD</td>
-                                            <td class="st-val tab">Уровень 4</td>
-                                        </tr>
-                                        <tr class="">
-                                            <td class="st-key">Депозит BTC</td>
-                                            <td class="st-val tab">Уровень 5</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+<!--                                    <table class=" table stacktable small-only">-->
+<!--                                        <tbody>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Пользователь</td>-->
+<!--                                            <td class="st-val ">Пользователь</td>-->
+<!--                                        </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Email</td>-->
+<!--                                            <td class="st-val ">Email</td>-->
+<!--                                        </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Дата регистрации</td>-->
+<!--                                            <td class="st-val ">Дата регистрации</td>-->
+<!--                                        </tr>-->
+<!--                                            <tr class="">-->
+<!--                                                <td class="st-key">Депозит USD</td>-->
+<!--                                                <td class="st-val ">Депозит USD</td>-->
+<!--                                            </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Депозит BTC</td>-->
+<!--                                            <td class="st-val ">Депозит BTC</td>-->
+<!--                                        </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Сумма</td>-->
+<!--                                            <td class="st-val ">Сумма</td>-->
+<!--                                        </tr>-->
+<!--                                        </tbody>-->
+<!--                                    </table>-->
+<!--                                    <table class=" table stacktable small-only">-->
+<!--                                        <tbody>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Пользователь</td>-->
+<!--                                            <td class="st-val tab opened">Уровень 1</td>-->
+<!--                                        </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Email</td>-->
+<!--                                            <td class="st-val tab">Уровень 2</td>-->
+<!--                                        </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Дата регистрации</td>-->
+<!--                                            <td class="st-val tab">Уровень 3</td>-->
+<!--                                        </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Депозит USD</td>-->
+<!--                                            <td class="st-val tab">Уровень 4</td>-->
+<!--                                        </tr>-->
+<!--                                        <tr class="">-->
+<!--                                            <td class="st-key">Депозит BTC</td>-->
+<!--                                            <td class="st-val tab">Уровень 5</td>-->
+<!--                                        </tr>-->
+<!--                                        </tbody>-->
+<!--                                    </table>-->
                                 </div>
                                 <table id="card-table" cellspacing="0" cellpadding="0" border="0" class="table stacktable large-only">
                                     <tbody>
