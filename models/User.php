@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\models\fileuploads\FileUploads;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 
@@ -14,7 +15,7 @@ use yii\web\IdentityInterface;
  * @property string $username
  * @property string $email
  * @property string $password
- * @property string $image
+ * @property string $userpic_id
  * @property string $authKey
  * @property integer $pincode
  * @property integer $ipadress
@@ -36,14 +37,18 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @inheritdoc
      */
-//    public function rules()
-//    {
-//        return [
-//            [['name', 'surname', 'username', 'email', 'password', 'image', 'authKey', 'pincode', 'ipadress'], 'required'],
-//            [['pincode', 'ipadress'], 'integer'],
-//            [['name', 'surname', 'username', 'email', 'password', 'image', 'authKey', 'perfectmoney', 'advancedcash', 'bitcoin'], 'string', 'max' => 255],
-//        ];
-//    }
+    public function rules()
+    {
+        return [
+            [['username', 'email', 'password'], 'required'],
+
+            [['name', 'surname', 'username', 'email'], 'trim', 'on'=>'update-profile'],
+            [['perfectmoney', 'advancedcash', 'bitcoin'], 'trim', 'on'=>'update-payments'],
+            [['pincode', 'ipadress', 'userpic_id', 'default_pay'], 'integer'],
+
+            [['name', 'surname', 'username', 'email', 'password', 'perfectmoney', 'advancedcash', 'bitcoin'], 'string', 'max' => 255],
+        ];
+    }
 
     /**
      * @inheritdoc
@@ -57,7 +62,7 @@ class User extends ActiveRecord implements IdentityInterface
             'username' => 'username',
             'email' => 'Email',
             'password' => 'Password',
-            'image' => 'Image',
+            'userpic_id' => 'Userpic',
             'authKey' => 'Auth Key',
             'pincode' => 'Pincode',
             'ipadress' => 'Ipadress',
@@ -97,6 +102,15 @@ class User extends ActiveRecord implements IdentityInterface
     public static function findIdentity($id)
     {
         return static::findOne($id);
+    }
+
+    public static function getPaymentsList()
+    {
+        return [
+            '0' => 'Advanced Cash',
+            '1' => 'Perfect Money',
+            '2' => 'Bitcoin',
+        ];
     }
 
     /**
@@ -157,5 +171,34 @@ class User extends ActiveRecord implements IdentityInterface
     public function validatePassword($password)
     {
         return \Yii::$app->security->validatePassword($password, $this->password);
+    }
+
+    public function updateProfile()
+    {
+        return $this->save();
+    }
+
+    /**
+     * Relation
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserpic()
+    {
+        return $this->hasOne(FileUploads::className(), ['id' => 'userpic_id']);
+    }
+
+    public function getUserpicUrl($width=100, $height=100) {
+        $url = $this->getDefaultUserpicUrl();
+        if ($this->userpic) {
+            $url = $this->userpic->getFileUrl();
+        }
+
+        $src = \app\helpers\ImageHelper::getPicture($url, $width, $height);
+
+        return $src;
+    }
+
+    public function getDefaultUserpicUrl() {
+        return 'no-image.png';
     }
 }

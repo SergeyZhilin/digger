@@ -1,11 +1,23 @@
 <?php
 
+use yii\helpers\Html;
+use app\models\fileuploads\FileUploads;
+use demonId\ajaxFileUploader\EAjaxUpload;
+use yii\helpers\Url;
+use yii\web\JsExpression;
+use app\helpers\ViewHelper;
+use app\helpers\ImageHelper;
+
 $this->title = 'Profile';
 $this->params['breadcrumbs'][] = $this->title;
 
 if(Yii::$app->user->isGuest) {
     return Yii::$app->response->redirect('login');
 }
+
+/**
+ * @var $modelUser \app\models\User;
+ */
 
 ?>
 
@@ -25,11 +37,11 @@ if(Yii::$app->user->isGuest) {
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="<?= $this->context->path.$this->context->image?>" alt="avatar" class="img-circle profile_img">
+                        <?= Html::img($modelUser->getUserpicUrl(), ['class'=>'img-circle profile_img']); ?>
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
-                        <h2><?= $this->context->username; ?></h2>
+                        <h2><?= $this->context->users->username; ?></h2>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -190,7 +202,7 @@ if(Yii::$app->user->isGuest) {
                             <div id="crop-avatar">
                                 <!-- Current avatar -->
 
-                                    <img style="width: 200px; height: 200px;" class="img-responsive avatar-view center-block" src="<?= $this->context->path.$this->context->image?>" alt="Avatar" title="Change the avatar">
+                                <?= Html::img($modelUser->getUserpicUrl(), ['class'=>'img-responsive avatar-view center-block', 'title'=>'Change the avatar']); ?>
 
                             </div>
                         </div>
@@ -199,30 +211,74 @@ if(Yii::$app->user->isGuest) {
                         <?php
                         $form = \yii\widgets\ActiveForm::begin([
                             'id' => 'profile-form',
-                            'options' => ['class' => 'form-horizontal', 'enctype' => 'multipart/form-data'],
+                            'enableClientValidation'=>false,
+                            'validateOnSubmit'=>false,
+                            'options' => ['class' => 'form-horizontal'],
 
-                        ]) ?>
+                        ]);
+                        echo Html::activeHiddenInput($modelUser, 'userpic_id', ['id'=>'userpic_id']);
+                        ?>
 
-                        <?= $form->field($model, 'image')->fileInput() ?>
+                        <p class="text-center text-muted">
+                            <?php
+                            $userpic_settings = FileUploads::uploadSettings('userpic');
+
+                            echo ' Supported file formats: '.implode(', ', $userpic_settings['allowedExtensions']).'.<br> Maximum file size : '.round($userpic_settings['sizeLimit']/1024/1024, 2).' MB';
+                            ?>
+                        </p>
+                        <div class="clearfix mb15">
+                            <?= Html::a('Upload a photo', '#', ['id'=>'uploadUserpic', 'class'=>'btn btn-primary pull-right']); ?>
+                            <?php
+                            echo EAjaxUpload::widget([
+                                'id'=>'uploadUserpic',
+                                'config'=>\yii\helpers\ArrayHelper::merge(
+                                    FileUploads::uploadSettings('userpic'),
+                                    [
+                                        'action'=>Url::toRoute(['uploads/upload-file']),
+                                        'onComplete'=>new JsExpression("function(id, fileName, responseJSON){ if(typeof(responseJSON.error)=='undefined') setUserpic(responseJSON); }"),
+                                        'onSubmit'=>new JsExpression("function(id, fileName){ loadUserpic(); }"),
+                                        'messages'=>[
+                                            'typeError'=>'File format error. Supported formats: {extensions}',
+                                            'sizeError'=>'File is too big. Maximum file size: {sizeLimit}',
+                                        ],
+                                        'showMessage'=>new JsExpression("function(message){ errorUserpic(message); }")
+                                    ]
+                                ),
+                                'postParams'=>['imageCropRatio'=>'100,100']
+                            ]);
+                            ?>
+                            <a class="btn btn-gray<?php if(!$modelUser->userpic) echo ' hidden'; ?>" id="del-userpic" href="#">Delete photo</a>
+                        </div>
+
+                        <div class="alert hidden" id="userpic-form-error">Upload file error:<ul><li></li></ul></div>
+
+                        <div id="userpic-image-frame" class="text-center mb15">
+                            <?= ViewHelper::imageCropForm('userpic', $modelUser->userpic, 300, 300); ?>
+                        </div>
+
+                        <div id="userpic-load" class="text-center mb15 form-group hidden" ><img src="/images/loader-big.gif" /></div>
+
+                        <div class="text-center mb15 empty<?php if($modelUser->userpic) echo ' hidden'; ?>" id="userpic_empty">
+                            <?php
+                            $src = ImageHelper::getPicture($modelUser->getDefaultUserpicUrl(), 216, 315);
+                            echo Html::img($src);
+                            ?>
+                        </div>
 
 
-                        <?= $form->field($model,'name',['inputOptions'=>[
-                            'value'=> $this->context->users->name
-                        ]])->textInput() ?>
+                        <?= $form->field($modelUser,'name')->textInput() ?>
 
 
-                        <?= $form->field($model,'surname', ['inputOptions'=>[
-                            'value'=> $this->context->users->surname
-                        ]])->textInput() ?>
+                        <?= $form->field($modelUser,'surname')->textInput() ?>
 
 
-                        <?= $form->field($model,'username', ['inputOptions'=>[
-                            'readonly'=> true, 'value'=> $this->context->users->username
+                        <?= $form->field($modelUser,'username', ['inputOptions'=>[
+                            'readonly'=> true
                         ]])->textInput()?>
 
 
-                        <?= $form->field($model,'email', ['inputOptions'=>[
-                            'readonly'=> true, 'value'=> $this->context->users->email
+                        <?= $form->field($modelUser,'email', ['inputOptions'=>[
+                            'readonly'=> true
                         ]])->textInput()?>
 
                         <div class="form-group">
@@ -237,4 +293,20 @@ if(Yii::$app->user->isGuest) {
             <div class="clearfix"></div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('body').on('click', '#del-userpic', function () {
+                $('#userpic-frame').html('');
+                $('#userpic_empty').removeClass('hidden');
+
+                $(this).addClass('hidden');
+                $('#userpic_id').attr('value', 0);
+
+                $('#userpic-form-error').addClass('hidden');
+
+                return false;
+            });
+        });
+    </script>
+
 </div>

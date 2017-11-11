@@ -17,11 +17,9 @@ class ProfileForm extends Model{
 
     public function rules(){
         return [
-            ['name', 'trim'],
-            ['surname', 'trim'],
-            ['username', 'trim'],
-            ['email', 'trim'],
+            [['name', 'surname', 'username', 'email'], 'trim'],
             [['image'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
+            [['image'], 'upload']
         ];
     }
 
@@ -37,19 +35,21 @@ class ProfileForm extends Model{
 
     public function upload()
     {
-        if ($this->validate()) {
+        var_dump($this->image); die();
+        //$this->image = UploadedFile::getInstance($this, 'image');
 
-            if (isset($this->image) && !empty($this->image)){
+        if (isset($this->image) && !empty($this->image)){
 
             $path = ('uploads/' . $this->image->baseName . '.' . $this->image->extension);
 //            $imgname = uniqid($this->image->baseName);
 //            $path = ('uploads/' . $imgname . '.' . $this->image->extension);
 
             $this->image->saveAs($path);
+
+
             return true;
-            }
         } else {
-            return false;
+            $this->addError('image', 'something went wrong');
         }
     }
 

@@ -211,7 +211,4 @@ if(Yii::$app->user->isGuest) {
                     </div>
                 </div>
 
-                <script src="/js/echarts.min.js"></script>
-                <script src="/js/echart-stats.js"></script>
-
                 <div class="clearfix"></div></div></div></div>

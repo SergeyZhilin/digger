@@ -15,10 +15,10 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "costa-rico/yii2-images": "dev-master"
+        "weotch/phpthumb": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -55,6 +55,11 @@
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "demonId\\ajaxFileUploader\\": "widgets/EAjaxUpload/"
         }
     }
 }

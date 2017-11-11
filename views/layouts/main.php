@@ -118,7 +118,7 @@ AppAsset::register($this);
 
     </div>
 </footer> <!-- .site-footer -->
-
+<?php echo $this->render('/layouts/parts/_ajax_urls'); ?>
 <?php $this->endBody() ?>
 </body>
 </html>

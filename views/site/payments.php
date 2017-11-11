@@ -1,5 +1,7 @@
 <?php
 
+use app\models\User;
+
 $this->title = 'Payment Requisites';
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -7,6 +9,9 @@ if(Yii::$app->user->isGuest) {
     return Yii::$app->response->redirect('login');
 }
 
+/**
+ * @var $modelUser \app\models\User;
+ */
 ?>
 
 <div class="container body">
@@ -202,25 +207,20 @@ if(Yii::$app->user->isGuest) {
                         'options' => ['class' => 'form-horizontal'],
                         ]) ?>
 
-                        <?= $form->field($model, 'default_pay')->dropDownList([
-                                '0' => 'Advanced Cash',
-                                '1' => 'Perfect Money',
-                                '2' => 'Bitcoin',
-                        ])?>
+                        <?= $form->field($modelUser, 'default_pay')->dropDownList(User::getPaymentsList())?>
 
 
-                        <?= $form->field($model,'advancedcash',['inputOptions'=>[
-                            'placeholder'=>'sample@domain.zn', 'value'=> $this->context->users->advancedcash
+                        <?= $form->field($modelUser,'advancedcash',['inputOptions'=>[
+                            'placeholder'=>'sample@domain.zn']])->textInput() ?>
+
+
+                        <?= $form->field($modelUser,'perfectmoney', ['inputOptions'=>[
+                            'placeholder'=>'U1234567'
                         ]])->textInput() ?>
 
 
-                        <?= $form->field($model,'perfectmoney', ['inputOptions'=>[
-                            'placeholder'=>'U1234567', 'value'=> $this->context->users->perfectmoney
-                        ]])->textInput() ?>
-
-
-                        <?= $form->field($model,'bitcoin', ['inputOptions'=>[
-                            'placeholder'=>'', 'value'=> $this->context->users->bitcoin
+                        <?= $form->field($modelUser,'bitcoin', ['inputOptions'=>[
+                            'placeholder'=>''
                         ]])->textInput()?>
 
                         <div class="form-group">

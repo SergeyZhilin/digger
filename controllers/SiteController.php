@@ -2,12 +2,15 @@
 
 namespace app\controllers;
 
+use app\helpers\ViewHelper;
+use app\models\fileuploads\FileUploads;
 use app\models\PaymentsForm;
 use app\models\ProfileForm;
 use app\models\User;
 use Yii;
 use yii\db\Exception;
 use yii\filters\AccessControl;
+use yii\web\BadRequestHttpException;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
@@ -44,6 +47,33 @@ class SiteController extends MainController
         ];
     }
 
+    public function beforeAction($action)
+    {
+        if (!parent::beforeAction($action))
+        {
+            return false;
+        }
+
+        $this->bit_prices = \app\models\Digger::findOne(1);
+        $this->payments = \app\models\Payment::find()->where('user_id = :user_id', [':user_id' => $this->users->id])->all();
+
+        if (isset($this->payments)){
+            foreach ($this->payments as $payment){
+
+                $this->payin += $payment->payin;
+                $this->payout += $payment->payout;
+                $this->in_fr_deposit += $payment->in_fr_deposit;
+            }
+
+            $this->bit_price_in = round($this->payin / $this->bit_prices->bit_price, 2);
+            $this->bit_price_out = round($this->payout / $this->bit_prices->bit_price, 2);
+            $this->bit_price_dep = round($this->in_fr_deposit / $this->bit_prices->bit_price, 2);
+
+        }
+
+        return true;
+    }
+
     /**
      * @inheritdoc
      */
@@ -67,6 +97,8 @@ class SiteController extends MainController
      */
     public function actionIndex()
     {
+        $this->layout = 'main';
+
         return $this->render('index');
     }
 
@@ -255,31 +287,25 @@ class SiteController extends MainController
      */
     public function actionProfile()
     {
-        $model = new ProfileForm();
-        $modeluser = User::find()->where([
-            'id'=>Yii::$app->user->identity->id
-        ])->one();
+        $modelUser = User::findOne($this->users->id);
 
-        if($model->load(\Yii::$app->request->post()) && $model->validate()){
-
-            $model->image = UploadedFile::getInstance($model, 'image');
-
-            if ($model->upload()) {
-                $modeluser->image = $model->image->name;
-            }
-
-            if ($model->save()) {
-                $modeluser->name = $model->name;
-                $modeluser->surname = $model->surname;
-                $modeluser->username = $model->username;
-                $modeluser->email = $model->email;
-            }
-
-            if($modeluser->save()){
-                return $this->render('profile', ['model'=>$model]);
+        if($modelUser->load(\Yii::$app->request->post())){
+            if($modelUser->updateProfile()) {
+                //Yii::$app->session->setFlash('You have successfully apdate your profile!');
             }
         }
-        return$this->render('profile', ['model'=>$model]);
+
+        return $this->render('profile', ['modelUser'=>$modelUser]);
+    }
+
+    public function actionRenderUserpicFrame()
+    {
+        if(!Yii::$app->request->isAjax) throw new BadRequestHttpException(404);
+        $file_id = Yii::$app->request->getBodyParam('file_id', null);
+
+        $file = FileUploads::loadFile($file_id);
+
+        return  ViewHelper::imageCropForm('userpic', $file);
     }
 
     /**
@@ -310,25 +336,15 @@ class SiteController extends MainController
      */
     public function actionPayments()
     {
-        $model = new PaymentsForm();
-        $modeluser = User::find()->where([
-            'id'=>Yii::$app->user->identity->id
-        ])->one();
+        $modelUser = User::findOne($this->users->id);
 
-        if($model->load(\Yii::$app->request->post()) && $model->validate()){
-
-            if ($model->save()){
-                $modeluser->perfectmoney = $model->perfectmoney;
-                $modeluser->advancedcash = $model->advancedcash;
-                $modeluser->bitcoin = $model->bitcoin;
-                $modeluser->default_pay = $model->default_pay;
+        if($modelUser->load(\Yii::$app->request->post())){
+            if ($modelUser->save()){
+                return $this->render('payments', ['modelUser'=>$modelUser]);
             };
-
-            if($modeluser->save()){
-                return $this->render('payments', ['model'=>$model]);
-            }
         }
-        return$this->render('payments', ['model'=>$model]);
+
+        return$this->render('payments', ['modelUser'=>$modelUser]);
     }
 
     /**
