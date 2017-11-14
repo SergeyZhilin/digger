@@ -19,7 +19,6 @@ if(Yii::$app->user->isGuest) {
                             <span>Your Site</span>
                         </a>
                     </div>
-
                     <div class="clearfix"></div>
 
                     <!-- menu profile quick info -->
@@ -42,32 +41,32 @@ if(Yii::$app->user->isGuest) {
                         <div class="menu_section active">
                             <ul class="nav side-menu" style="">
                                 <li class="active  current-page">
-                                    <a href="/office">
+                                    <a href="office">
                                         <i class="fa fa-home fa-fw"></i>Кабинет
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="/deposits">
+                                    <a href="deposits">
                                         <i class="fa fa-bank fa-fw"></i>Мои инвестиции
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="/payin">
+                                    <a href="payin">
                                         <i class="fa fa-briefcase fa-fw"></i>Пополнить баланс
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="/payout">
+                                    <a href="payout">
                                         <i class="fa fa-refresh fa-fw"></i>Вывод средств
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="/operations">
+                                    <a href="operations">
                                         <i class="fa fa-calendar fa-fw"></i>История операций
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="/refsys">
+                                    <a href="refsys">
                                         <i class="fa fa-users fa-fw"></i>Партнерская программа
                                     </a>
                                 </li>
@@ -82,7 +81,7 @@ if(Yii::$app->user->isGuest) {
 <!--                                    </ul>-->
 <!--                                </li>-->
                                 <li class="">
-                                    <a href="/profile">
+                                    <a href="profile">
                                         <i class="fa fa-user fa-fw"></i>Профиль
                                     </a>
                                 </li>
@@ -185,7 +184,11 @@ if(Yii::$app->user->isGuest) {
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                            <div id="echarts" style="height: 400px; -webkit-tap-highlight-color: transparent; user-select: none; background: transparent;" _echarts_instance_="ec_1509361632975"><div style="position: relative; overflow: hidden; width: 1013px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="1013" height="400" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 1013px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+                            <div id="echarts" style="height: 400px; -webkit-tap-highlight-color: transparent; user-select: none; background: transparent;" _echarts_instance_="ec_1509361632975">
+                                <div style="position: relative; overflow: hidden; width: 1013px; height: 400px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;">
+                                    <canvas width="1013" height="400" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 1013px; height: 400px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

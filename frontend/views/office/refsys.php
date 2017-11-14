@@ -42,32 +42,32 @@ if(Yii::$app->user->isGuest) {
                     <div class="menu_section active">
                         <ul class="nav side-menu" style="">
                             <li class="">
-                                <a href="/office">
+                                <a href="office">
                                     <i class="fa fa-home fa-fw"></i>Кабинет
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/deposits">
+                                <a href="deposits">
                                     <i class="fa fa-bank fa-fw"></i>Мои инвестиции
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/payin">
+                                <a href="payin">
                                     <i class="fa fa-briefcase fa-fw"></i>Пополнить баланс
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/payout">
+                                <a href="payout">
                                     <i class="fa fa-refresh fa-fw"></i>Вывод средств
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/operations">
+                                <a href="operations">
                                     <i class="fa fa-calendar fa-fw"></i>История операций
                                 </a>
                             </li>
                             <li class="active  current-page">
-                                <a href="/refsys">
+                                <a href="refsys">
                                     <i class="fa fa-users fa-fw"></i>Партнерская программа
                                 </a>
                             </li>
@@ -82,7 +82,7 @@ if(Yii::$app->user->isGuest) {
                             <!--                                    </ul>-->
                             <!--                                </li>-->
                             <li class="">
-                                <a href="/profile">
+                                <a href="profile">
                                     <i class="fa fa-user fa-fw"></i>Профиль
                                 </a>
                             </li>
@@ -200,60 +200,6 @@ if(Yii::$app->user->isGuest) {
                                     </div>
                                 </form>
                                 <div class="clearfix"></div>
-                                <div>
-<!--                                    <table class=" table stacktable small-only">-->
-<!--                                        <tbody>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Пользователь</td>-->
-<!--                                            <td class="st-val ">Пользователь</td>-->
-<!--                                        </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Email</td>-->
-<!--                                            <td class="st-val ">Email</td>-->
-<!--                                        </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Дата регистрации</td>-->
-<!--                                            <td class="st-val ">Дата регистрации</td>-->
-<!--                                        </tr>-->
-<!--                                            <tr class="">-->
-<!--                                                <td class="st-key">Депозит USD</td>-->
-<!--                                                <td class="st-val ">Депозит USD</td>-->
-<!--                                            </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Депозит BTC</td>-->
-<!--                                            <td class="st-val ">Депозит BTC</td>-->
-<!--                                        </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Сумма</td>-->
-<!--                                            <td class="st-val ">Сумма</td>-->
-<!--                                        </tr>-->
-<!--                                        </tbody>-->
-<!--                                    </table>-->
-<!--                                    <table class=" table stacktable small-only">-->
-<!--                                        <tbody>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Пользователь</td>-->
-<!--                                            <td class="st-val tab opened">Уровень 1</td>-->
-<!--                                        </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Email</td>-->
-<!--                                            <td class="st-val tab">Уровень 2</td>-->
-<!--                                        </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Дата регистрации</td>-->
-<!--                                            <td class="st-val tab">Уровень 3</td>-->
-<!--                                        </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Депозит USD</td>-->
-<!--                                            <td class="st-val tab">Уровень 4</td>-->
-<!--                                        </tr>-->
-<!--                                        <tr class="">-->
-<!--                                            <td class="st-key">Депозит BTC</td>-->
-<!--                                            <td class="st-val tab">Уровень 5</td>-->
-<!--                                        </tr>-->
-<!--                                        </tbody>-->
-<!--                                    </table>-->
-                                </div>
                                 <table id="card-table" cellspacing="0" cellpadding="0" border="0" class="table stacktable large-only">
                                     <tbody>
                                     <tr>
@@ -280,7 +226,6 @@ if(Yii::$app->user->isGuest) {
                 </div>
             </div>
             <div class="clearfix">
-
             </div>
         </div>
     </div>

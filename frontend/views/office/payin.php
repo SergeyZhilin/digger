@@ -42,32 +42,32 @@ if(Yii::$app->user->isGuest) {
                     <div class="menu_section">
                         <ul class="nav side-menu" style="">
                             <li class="">
-                                <a href="/office">
+                                <a href="office">
                                     <i class="fa fa-home fa-fw"></i>Кабинет
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/deposits">
+                                <a href="deposits">
                                     <i class="fa fa-bank fa-fw"></i>Мои инвестиции
                                 </a>
                             </li>
                             <li class="active  current-page">
-                                <a href="/payin">
+                                <a href="payin">
                                     <i class="fa fa-briefcase fa-fw"></i>Пополнить баланс
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/payout">
+                                <a href="payout">
                                     <i class="fa fa-refresh fa-fw"></i>Вывод средств
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/operations">
+                                <a href="operations">
                                     <i class="fa fa-calendar fa-fw"></i>История операций
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/refsys">
+                                <a href="refsys">
                                     <i class="fa fa-users fa-fw"></i>Партнерская программа
                                 </a>
                             </li>
@@ -82,7 +82,7 @@ if(Yii::$app->user->isGuest) {
                             <!--                                    </ul>-->
                             <!--                                </li>-->
                             <li class="">
-                                <a href="/profile">
+                                <a href="profile">
                                     <i class="fa fa-user fa-fw"></i>Профиль
                                 </a>
                             </li>
@@ -242,19 +242,4 @@ if(Yii::$app->user->isGuest) {
                     </div>
                 </div>
             </div>
-
-            <script>
-//                $('#add_Curr').change(function () {
-//                    var curr = '#' + $(this).val();
-//
-//                    var el = $('#add_PSys');
-//                    var options = el.find('option').hide();
-//
-//                    var op = el.find('option' + curr).show();
-//                    el.val(op.first().val());
-//                });
-            </script>
-
-
-
             <div class="clearfix"></div></div></div></div>

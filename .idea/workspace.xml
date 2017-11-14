@@ -2,298 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07c27995-03d4-4862-9b31-298177624110" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/AppAsset.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/commands/HelloController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/console.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/db.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/params.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/test_db.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/web.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/MainController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/OfficeController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/SiteController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/UploadsController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/helpers/FileHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/helpers/ImageHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/helpers/ViewHelper.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mail/layouts/html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/ContactForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Digger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/LoginForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/PasswordForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Payment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/PaymentsForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/ProfileForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/SignupForm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/fileuploads/FileUploads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/Module.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/controllers/DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/controllers/DiggerController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/controllers/PaymentController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/controllers/UserController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/models/Digger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/models/Payment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/models/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/default/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/digger/_form.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/digger/create.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/digger/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/digger/update.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/digger/view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/payment/_form.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/payment/create.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/payment/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/payment/update.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/payment/view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/user/_form.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/user/create.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/user/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/user/update.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/admin/views/user/view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/_data/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/_output/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/_support/AcceptanceTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/_support/FunctionalTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/_support/UnitTester.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/acceptance.suite.yml.example" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/acceptance/AboutCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/acceptance/ContactCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/acceptance/HomeCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/acceptance/LoginCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/acceptance/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/bin/yii" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/bin/yii.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/functional.suite.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/functional/ContactFormCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/functional/LoginFormCest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/functional/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit.suite.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/_bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/models/ContactFormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/models/LoginFormTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/models/UserTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/layouts/main.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/layouts/parts/_ajax_urls.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/about.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/account.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/changepass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/contact.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/deposits.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/error.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/login.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/office.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/operations.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/payin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/payments.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/payout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/pin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/profile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/refsys.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/signup.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/assets/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/simply.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/site.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._about-us.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._contact.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._dummy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._fonts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._images" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._news.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._services.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/._style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/css/._animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._.DS_Store" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._featured-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._featured-image-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._featured-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._featured-image-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._featured-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._featured-image-3@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._figure-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._figure-image-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._figure-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._figure-image-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-3@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._person-4@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._server.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/dummy/._server@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._icomoon.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._icomoon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._icomoon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/fonts/._icomoon.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._connector.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._connector@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._logo-footer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._logo-footer@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._logo-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._logo-icon@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._quote.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/images/._quote@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/._app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/._ie-support" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/._jquery-1.11.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/._jquery-1.11.1.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/._min" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/._plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/ie-support/._html5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/ie-support/._pie.htc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/ie-support/._respond.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/min/._app-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/js/min/._plugins-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/._layout" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/._libs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/._pages" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/._style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/layout/.__content.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/layout/.__footer.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/layout/.__header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/.__component.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/.__lineo-icon.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/.__mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/.__normalize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/.__settings.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/.__widgets.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/._bootstrap-grid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/bootstrap-grid/.__grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/bootstrap-grid/.__mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/libs/bootstrap-grid/.__settings.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/pages/.__news.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/__MACOSX/sass/pages/.__page.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/css/animate.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/featured-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/featured-image-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/featured-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/featured-image-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/featured-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/featured-image-3@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/figure-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/figure-image-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/figure-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/figure-image-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-3@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/person-4@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/server.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/dummy/server@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/icomoon.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/icomoon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/icomoon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/fonts/icomoon.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/connector.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/connector@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/logo-footer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/logo-footer@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/logo-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/logo-icon@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/quote.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/images/quote@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/ie-support/html5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/ie-support/pie.htc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/ie-support/respond.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/jquery-1.11.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/jquery-1.11.1.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/min/app-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/min/plugins-min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/js/plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/layout/_content.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/layout/_footer.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/layout/_header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/_component.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/_lineo-icon.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/_normalize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/_settings.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/_widgets.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/bootstrap-grid/_grid.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/bootstrap-grid/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/libs/bootstrap-grid/_settings.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/pages/_news.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/pages/_page.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/sass/style.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/diggerstyle/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/featured-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/featured-image-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/featured-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/featured-image-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/featured-image-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/featured-image-3@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/figure-image-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/figure-image-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/figure-image-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/figure-image-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-1@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-2@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-3@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/person-4@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/server.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/dummy/server@2x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/user.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index-test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/no-image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/ping.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/Asset.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/EAjaxUpload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/actions/DownloadFileAction.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/actions/UploadFileAction.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/assets/fileuploader.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/assets/fileuploader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/assets/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/widgets/EAjaxUpload/qqFileUploader.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE.md" afterPath="$PROJECT_DIR$/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codeception.yml" afterPath="$PROJECT_DIR$/codeception.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.php" afterPath="$PROJECT_DIR$/requirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii" afterPath="$PROJECT_DIR$/yii" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii.bat" afterPath="$PROJECT_DIR$/yii.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/office/account.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/PasswordForm.php" afterPath="$PROJECT_DIR$/common/models/PasswordForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/User.php" afterPath="$PROJECT_DIR$/common/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/main.php" afterPath="$PROJECT_DIR$/frontend/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/OfficeController.php" afterPath="$PROJECT_DIR$/frontend/controllers/OfficeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/SiteController.php" afterPath="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/layouts/main.php" afterPath="$PROJECT_DIR$/frontend/views/layouts/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/layouts/office.php" afterPath="$PROJECT_DIR$/frontend/views/layouts/office.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/changepass.php" afterPath="$PROJECT_DIR$/frontend/views/office/changepass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/deposits.php" afterPath="$PROJECT_DIR$/frontend/views/office/deposits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/office.php" afterPath="$PROJECT_DIR$/frontend/views/office/office.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/operations.php" afterPath="$PROJECT_DIR$/frontend/views/office/operations.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/payin.php" afterPath="$PROJECT_DIR$/frontend/views/office/payin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/payments.php" afterPath="$PROJECT_DIR$/frontend/views/office/payments.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/payout.php" afterPath="$PROJECT_DIR$/frontend/views/office/payout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/pin.php" afterPath="$PROJECT_DIR$/frontend/views/office/pin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/profile.php" afterPath="$PROJECT_DIR$/frontend/views/office/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/office/refsys.php" afterPath="$PROJECT_DIR$/frontend/views/office/refsys.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -303,21 +30,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="office.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/views/layouts/office.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="232" column="26" lean-forward="false" selection-start-line="232" selection-start-column="26" selection-end-line="232" selection-end-column="26" />
-              <folding>
-                <element signature="e#66#87#0#PHP" expanded="true" />
-                <element signature="e#702#707#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -330,7 +43,12 @@
       <find>container</find>
       <find>BootstrapAsset</find>
       <find>body</find>
+      <find>&lt;a href=&quot;</find>
+      <find>ActiveForm</find>
     </findStrings>
+    <dirStrings>
+      <dir>E:\OSPanel\domains\digger.advanced</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -339,25 +57,31 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/frontend/views/site/index.php" />
-        <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/about.php" />
         <option value="$PROJECT_DIR$/frontend/views/site/contact.php" />
         <option value="$PROJECT_DIR$/common/models/fileuploads/FileUploads.php" />
         <option value="$PROJECT_DIR$/common/models/ContactForm.php" />
-        <option value="$PROJECT_DIR$/common/models/PasswordForm.php" />
         <option value="$PROJECT_DIR$/common/models/Payment.php" />
         <option value="$PROJECT_DIR$/common/models/PaymentsForm.php" />
         <option value="$PROJECT_DIR$/common/models/ProfileForm.php" />
         <option value="$PROJECT_DIR$/common/models/SignupForm.php" />
         <option value="$PROJECT_DIR$/common/config/main-local.php" />
         <option value="$PROJECT_DIR$/common/models/Digger.php" />
-        <option value="$PROJECT_DIR$/common/models/User.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/MainController.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/UploadsController.php" />
+        <option value="$PROJECT_DIR$/frontend/web/css/simply.css" />
+        <option value="$PROJECT_DIR$/frontend/assets/AppAsset.php" />
+        <option value="$PROJECT_DIR$/frontend/config/main.php" />
+        <option value="$PROJECT_DIR$/common/models/User.php" />
+        <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/frontend/views/layouts/office.php" />
         <option value="$PROJECT_DIR$/frontend/controllers/OfficeController.php" />
+        <option value="$PROJECT_DIR$/common/models/PasswordForm.php" />
+        <option value="$PROJECT_DIR$/frontend/views/office/account.php" />
         <option value="$PROJECT_DIR$/frontend/views/office/changepass.php" />
         <option value="$PROJECT_DIR$/frontend/views/office/deposits.php" />
+        <option value="$PROJECT_DIR$/frontend/views/office/office.php" />
         <option value="$PROJECT_DIR$/frontend/views/office/operations.php" />
         <option value="$PROJECT_DIR$/frontend/views/office/payin.php" />
         <option value="$PROJECT_DIR$/frontend/views/office/payments.php" />
@@ -365,11 +89,6 @@
         <option value="$PROJECT_DIR$/frontend/views/office/pin.php" />
         <option value="$PROJECT_DIR$/frontend/views/office/profile.php" />
         <option value="$PROJECT_DIR$/frontend/views/office/refsys.php" />
-        <option value="$PROJECT_DIR$/frontend/web/css/simply.css" />
-        <option value="$PROJECT_DIR$/frontend/config/main.php" />
-        <option value="$PROJECT_DIR$/frontend/views/office/office.php" />
-        <option value="$PROJECT_DIR$/frontend/assets/AppAsset.php" />
-        <option value="$PROJECT_DIR$/frontend/views/layouts/office.php" />
       </list>
     </option>
   </component>
@@ -453,24 +172,25 @@
       <workItem from="1510572495648" duration="5505000" />
       <workItem from="1510578320239" duration="7699000" />
       <workItem from="1510589539061" duration="197000" />
-      <workItem from="1510649599930" duration="161000" />
+      <workItem from="1510649599930" duration="7316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13562000" />
+    <option name="totallyTimeSpent" value="20717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26096824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19062027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2667758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -478,7 +198,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -488,9 +207,15 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="change yii version.. hard work for restore project" />
+    <option name="LAST_COMMIT_MESSAGE" value="change yii version.. hard work for restore project" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -500,8 +225,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#66#87#0#PHP" expanded="true" />
-            <element signature="e#702#707#0#PHP" expanded="false" />
+            <element signature="e#66#87#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#7195#7201#0#HTML" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -524,6 +259,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#66#87#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -573,13 +311,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/PasswordForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="24" lean-forward="false" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -674,102 +405,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="192" column="81" lean-forward="false" selection-start-line="192" selection-start-column="81" selection-end-line="192" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/profile/main.php" />
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/UploadsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/site/about.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="194" column="5" lean-forward="false" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/OfficeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/deposits.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/operations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/payin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/payments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/payout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/pin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/refsys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -787,41 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/changepass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/AppAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/office/office.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="98" column="6" lean-forward="false" selection-start-line="98" selection-start-column="6" selection-end-line="98" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/init">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -830,14 +435,204 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="247" column="5" lean-forward="false" selection-start-line="247" selection-start-column="5" selection-end-line="247" selection-end-column="5" />
+          <folding>
+            <element signature="e#32#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/AppAsset.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="66" selection-end-column="6" />
+          <folding>
+            <element signature="e#702#707#0#PHP" expanded="false" />
+            <marker date="1510653976728" expanded="true" signature="2075:2122" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="2335:3712" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="2363:3702" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="2390:3690" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="2425:2900" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="2466:2755" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="2948:3675" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="2997:3195" ph="..." />
+            <marker date="1510653976728" expanded="true" signature="3267:3632" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/UploadsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/OfficeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/models/PasswordForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="e#32#40#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="191" column="37" lean-forward="false" selection-start-line="191" selection-start-column="37" selection-end-line="191" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/layouts/office.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="232" column="26" lean-forward="false" selection-start-line="232" selection-start-column="26" selection-end-line="232" selection-end-column="26" />
+        <state relative-caret-position="478">
+          <caret line="156" column="45" lean-forward="false" selection-start-line="156" selection-start-column="45" selection-end-line="156" selection-end-column="45" />
           <folding>
-            <element signature="e#66#87#0#PHP" expanded="true" />
-            <element signature="e#702#707#0#PHP" expanded="false" />
+            <element signature="e#66#87#0#PHP" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#7195#7201#0#HTML" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/changepass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1955">
+          <caret line="83" column="41" lean-forward="false" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+          <folding>
+            <marker date="1510658008542" expanded="true" signature="9693:9731" ph="..." />
+            <marker date="1510658008542" expanded="true" signature="9757:9795" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/deposits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1086">
+          <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/office.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="190" column="28" lean-forward="false" selection-start-line="190" selection-start-column="28" selection-end-line="190" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/operations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1885">
+          <caret line="84" column="41" lean-forward="false" selection-start-line="84" selection-start-column="41" selection-end-line="84" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/payin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="243" column="18" lean-forward="false" selection-start-line="243" selection-start-column="18" selection-end-line="243" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/payments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="e#7#30#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/payout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/pin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="184" column="72" lean-forward="false" selection-start-line="184" selection-start-column="72" selection-end-line="184" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1567">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/office/refsys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1090">
+          <caret line="227" column="34" lean-forward="false" selection-start-line="227" selection-start-column="34" selection-end-line="227" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>

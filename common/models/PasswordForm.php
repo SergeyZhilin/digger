@@ -3,7 +3,7 @@ namespace common\models;
 
 use Yii;
 use yii\base\Model;
-use app\models\User;
+use common\models\User;
 
 class PasswordForm extends Model{
     public $oldpass;

@@ -1,6 +1,8 @@
 <?php
 
-use app\models\User;
+use common\models\User;
+use yii\widgets\ActiveForm;
+use yii\bootstrap\Html;
 
 $this->title = 'Payment Requisites';
 $this->params['breadcrumbs'][] = $this->title;
@@ -10,7 +12,7 @@ if(Yii::$app->user->isGuest) {
 }
 
 /**
- * @var $modelUser \app\models\User;
+ * @var $modelUser User;
  */
 ?>
 
@@ -47,32 +49,32 @@ if(Yii::$app->user->isGuest) {
                     <div class="menu_section active">
                         <ul class="nav side-menu" style="">
                             <li class="">
-                                <a href="/office">
+                                <a href="office">
                                     <i class="fa fa-home fa-fw"></i>Кабинет
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/deposits">
+                                <a href="deposits">
                                     <i class="fa fa-bank fa-fw"></i>Мои инвестиции
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/payin">
+                                <a href="payin">
                                     <i class="fa fa-briefcase fa-fw"></i>Пополнить баланс
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/payout">
+                                <a href="payout">
                                     <i class="fa fa-refresh fa-fw"></i>Вывод средств
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/operations">
+                                <a href="operations">
                                     <i class="fa fa-calendar fa-fw"></i>История операций
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/refsys">
+                                <a href="refsys">
                                     <i class="fa fa-users fa-fw"></i>Партнерская программа
                                 </a>
                             </li>
@@ -87,7 +89,7 @@ if(Yii::$app->user->isGuest) {
                             <!--                                    </ul>-->
                             <!--                                </li>-->
                             <li class="active  current-page">
-                                <a href="/profile">
+                                <a href="profile">
                                     <i class="fa fa-user fa-fw"></i>Профиль
                                 </a>
                             </li>
@@ -184,25 +186,25 @@ if(Yii::$app->user->isGuest) {
                 <div class="x_content">
                     <ul class="nav nav-tabs bar_tabs">
                         <li role="presentation">
-                            <a href="/profile">Профиль</a>
+                            <a href="profile">Профиль</a>
                         </li>
                         <li role="presentation">
-                            <a href="/account">Безопасность</a>
+                            <a href="account">Безопасность</a>
                         </li>
                         <li role="presentation">
-                            <a href="/changepass">Изменить пароль</a>
+                            <a href="changepass">Изменить пароль</a>
                         </li>
                         <li role="presentation" class="active">
-                            <a href="/payments">Платежные реквизиты</a>
+                            <a href="payments">Платежные реквизиты</a>
                         </li>
                         <li role="presentation">
-                            <a href="/pin">PIN-Code</a>
+                            <a href="pin">PIN-Code</a>
                         </li>
                     </ul>
                     <div class="col-md-6 col-xs-12">
 
                         <?php
-                        $form = \yii\widgets\ActiveForm::begin([
+                        $form = ActiveForm::begin([
                         'id' => 'payments-form',
                         'options' => ['class' => 'form-horizontal'],
                         ]) ?>
@@ -225,10 +227,10 @@ if(Yii::$app->user->isGuest) {
 
                         <div class="form-group">
                             <div>
-                                <?= \yii\bootstrap\Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+                                <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
                             </div>
                         </div>
-                        <?php \yii\widgets\ActiveForm::end() ?>
+                        <?php ActiveForm::end() ?>
                     </div>
                 </div>
                 <div class="clearfix"></div>

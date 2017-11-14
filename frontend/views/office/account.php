@@ -1,6 +1,6 @@
 <?php
 
-$this->title = 'Pay Out';
+$this->title = 'Account';
 $this->params['breadcrumbs'][] = $this->title;
 
 if(Yii::$app->user->isGuest) {
@@ -8,8 +8,7 @@ if(Yii::$app->user->isGuest) {
 }
 
 ?>
-
-<div class="container-simply body">
+<div class="container body">
     <div class="main_container">
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
@@ -39,7 +38,7 @@ if(Yii::$app->user->isGuest) {
 
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                    <div class="menu_section">
+                    <div class="menu_section active">
                         <ul class="nav side-menu" style="">
                             <li class="">
                                 <a href="office">
@@ -56,7 +55,7 @@ if(Yii::$app->user->isGuest) {
                                     <i class="fa fa-briefcase fa-fw"></i>Пополнить баланс
                                 </a>
                             </li>
-                            <li class="active  current-page">
+                            <li class="">
                                 <a href="payout">
                                     <i class="fa fa-refresh fa-fw"></i>Вывод средств
                                 </a>
@@ -81,7 +80,7 @@ if(Yii::$app->user->isGuest) {
                             <!--                                        <li><a href="#">Презентация</a></li>-->
                             <!--                                    </ul>-->
                             <!--                                </li>-->
-                            <li class="">
+                            <li class="active  current-page">
                                 <a href="profile">
                                     <i class="fa fa-user fa-fw"></i>Профиль
                                 </a>
@@ -171,82 +170,65 @@ if(Yii::$app->user->isGuest) {
                     </div>
                 </div>
             </div>
-            <div class="row balance">
-                <div class="col-md-6 col-xs-12">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Вывод средств</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-
-                            <div class="block_form">
-
-                                <form method="post" name="add">
-                                    <input name="Oper" id="add_Oper" value="CASHOUT" type="hidden">
-                                    <div class="form-group">
-                                        <label>Валюта счета<span class="descr_star">*</span></label>
-                                        <div>
-                                            <select class="form-control" name="Curr" id="add_Curr">
-                                                <option selected="" value="0">- выбор -</option>
-                                                <option value="USD">USD</option>
-                                                <option value="BTC">BTC</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Сумма<span class="descr_star">*</span></label>
-                                        <div class="block_form_el_right">
-                                            <input class="form-control" name="Sum" id="add_Sum" value="" type="text">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">На платежную систему<span class="descr_star">*</span></label>
-                                        <div class="block_form_el_right">
-                                            <select name="PSys" id="add_PSys" class="form-control">
-                                                <option value="0">- выбор -</option>
-                                                <option value="1" id="USD">Advanced Cash</option>
-                                                <option value="4" id="USD">Perfect Money</option>
-                                                <option value="5" id="BTC">Bitcoin</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">Введите PIN-код (для подтверждения операции)<span class="descr_star">*</span></label>
-                                        <div class="block_form_el_right">
-                                            <input class="form-control" name="pin_code" id="pin_code" type="text">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="clearfix"></div>
-
-
-
-                                    <input name="__Cert" value="82647eb9" type="hidden">
-
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Безопасность</h2>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="col-md-6">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Информация</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-                            <ul class="list-group">
-                                <li class="list-group-item">Минимальный вывод от $1 и ฿ 0.01</li>
-                            </ul>
-                            <h4>* Перед выводом нужно указать свои реквизиты в настройках профиля.</h4>
-                            <h4>* Обработка заявки на вывод в ручном режиме и занимает <br>до 48 часов.</h4>
-                            <h4>* Пин-код автоматически отправлен на вашу электронную почту, если вы не получили его, вы можете отправить его снова в настройках профиля.</h4>
+                <div class="x_content">
+                    <ul class="nav nav-tabs bar_tabs">
+                        <li role="presentation">
+                            <a href="profile">Профиль</a>
+                        </li>
+                        <li role="presentation" class="active">
+                            <a href="account">Безопасность</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="changepass">Изменить пароль</a>
+                        </li><li role="presentation">
+                            <a href="payments">Платежные реквизиты</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="pin">PIN-Code</a>
+                        </li>
+                    </ul>
+                    <div class="col-md-6 col-xs-12">
+                        <div>
+                            <form method="post" action="account" name="account_frm">
+                                <div class="form-group">
+                                    <label for="">Контроль изменения IP-address</label>
+                                    <div class="block_form_el_right">
+                                        <select name="aIPSec" id="account_frm_aIPSec" class="form-control">
+                                            <option value="0">- по умолчанию -</option>
+                                            <option value="1">x.0.0.0</option>
+                                            <option value="2">x.x.0.0</option>
+                                            <option value="3">x.x.x.0</option>
+                                            <option value="4">x.x.x.x</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label for="login_frm_Pass">
+                                            <input name="aSessIP" id="account_frm_aSessIP" value="1" type="checkbox">Привязать сессию к IP-адресу</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="login_frm_Pass"><input name="aSessUniq" id="account_frm_aSessUniq" value="1" type="checkbox">Запретить параллельные сессии</label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="login_frm_Pass"><input name="aNoMail" id="account_frm_aNoMail" value="1" type="checkbox">Не получать уведомления на e-mail</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Авто выход в N минут (0 - по умолчанию)</label>
+                                    <div class="block_form_el_right">
+                                        <input name="aTimeOut" id="account_frm_aTimeOut" value="0" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <input name="__Cert" value="3c0f07da" type="hidden">
+                                <br>
+                                <input name="account_frm_btn" value="Сохранить" type="submit" class="btn btn-success">
+                            </form>
                         </div>
                     </div>
                 </div>

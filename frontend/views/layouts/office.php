@@ -8,7 +8,6 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -36,6 +35,11 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
+        ['label' => 'RU', 'items' => [['label' => 'Русский', 'url' => 'lang=ru'],
+            '<li class="divider"></li>',
+            ['label' => 'English', 'url' => 'lang=en'],
+        ]
+        ],
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
@@ -44,6 +48,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = ['label' => 'Personal Area', 'url' => ['/office/office']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
@@ -259,7 +264,7 @@ AppAsset::register($this);
 
 <style>
     .simply-body{
-        margin-top: 100px;
+        margin-top: 70px;
     }
 </style>
 <footer class="site-footer wow fadeInUp">

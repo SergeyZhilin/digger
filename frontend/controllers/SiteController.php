@@ -50,33 +50,6 @@ class SiteController extends MainController
         ];
     }
 
-    public function beforeAction($action)
-    {
-        if (!parent::beforeAction($action))
-        {
-            return false;
-        }
-
-        $this->bit_prices = Digger::findOne(1);
-        $this->payments = Payment::find()->where('user_id = :user_id', [':user_id' => $this->users->id])->all();
-
-        if (isset($this->payments)){
-            foreach ($this->payments as $payment){
-
-                $this->payin += $payment->payin;
-                $this->payout += $payment->payout;
-                $this->in_fr_deposit += $payment->in_fr_deposit;
-            }
-
-            $this->bit_price_in = round($this->payin / $this->bit_prices->bit_price, 2);
-            $this->bit_price_out = round($this->payout / $this->bit_prices->bit_price, 2);
-            $this->bit_price_dep = round($this->in_fr_deposit / $this->bit_prices->bit_price, 2);
-
-        }
-
-        return true;
-    }
-
     /**
      * @inheritdoc
      */

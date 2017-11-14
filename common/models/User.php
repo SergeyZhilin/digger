@@ -242,9 +242,9 @@ class User extends ActiveRecord implements IdentityInterface
             $url = $this->userpic->getFileUrl();
         }
 
-        $src = ImageHelper::getPicture($url, $width, $height);
+//        $src = ImageHelper::getPicture($url, $width, $height);
 
-        return $src;
+//        return $src;
     }
 
     public function getDefaultUserpicUrl() {

@@ -2,9 +2,44 @@
 
 namespace frontend\controllers;
 
+use common\models\Digger;
+use common\models\fileuploads\FileUploads;
+use common\models\PasswordForm;
+use common\models\Payment;
+use common\models\User;
+use Yii;
+use yii\db\Exception;
+
 class OfficeController extends MainController
 {
-    public $layout = 'office';
+//    public $layout = 'office';
+
+    public function beforeAction($action)
+    {
+        if (!parent::beforeAction($action))
+        {
+            return false;
+        }
+
+        $this->bit_prices = Digger::findOne(1);
+        $this->payments = Payment::find()->where('user_id = :user_id', [':user_id' => $this->users->id])->all();
+
+        if (isset($this->payments)){
+            foreach ($this->payments as $payment){
+
+                $this->payin += $payment->payin;
+                $this->payout += $payment->payout;
+                $this->in_fr_deposit += $payment->in_fr_deposit;
+            }
+
+            $this->bit_price_in = round($this->payin / $this->bit_prices->bit_price, 2);
+            $this->bit_price_out = round($this->payout / $this->bit_prices->bit_price, 2);
+            $this->bit_price_dep = round($this->in_fr_deposit / $this->bit_prices->bit_price, 2);
+
+        }
+
+        return true;
+    }
 
     /**
      * Display office page.
@@ -20,7 +55,7 @@ class OfficeController extends MainController
      * ChangePassword
      */
     public function actionChangepass(){
-        $model = new PasswordForm;
+        $model = new PasswordForm();
         $modeluser = User::find()->where([
             'id'=>Yii::$app->user->identity->id
         ])->one();

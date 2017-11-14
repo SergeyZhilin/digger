@@ -36,6 +36,11 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
+        ['label' => 'RU', 'items' => [['label' => 'Русский', 'url' => 'lang=ru'],
+            '<li class="divider"></li>',
+            ['label' => 'English', 'url' => 'lang=en'],
+        ]
+        ],
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
         ['label' => 'Contact', 'url' => ['/site/contact']],
@@ -44,6 +49,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = ['label' => 'Personal Area', 'url' => ['/office/office']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

@@ -1,12 +1,13 @@
 <?php
 
 use yii\helpers\Html;
-use app\models\fileuploads\FileUploads;
-use demonId\ajaxFileUploader\EAjaxUpload;
+use \common\models\fileuploads\FileUploads;
+use yii\widgets\ActiveForm;
+//use EAjaxUpload;
 use yii\helpers\Url;
 use yii\web\JsExpression;
-use app\helpers\ViewHelper;
-use app\helpers\ImageHelper;
+//use \common\models\fileuploads\ViewHelper;
+//use \common\models\fileuploads\ImageHelper;
 
 $this->title = 'Profile';
 $this->params['breadcrumbs'][] = $this->title;
@@ -54,32 +55,32 @@ if(Yii::$app->user->isGuest) {
                     <div class="menu_section active">
                         <ul class="nav side-menu" style="">
                             <li class="">
-                                <a href="/office">
+                                <a href="office">
                                     <i class="fa fa-home fa-fw"></i>Кабинет
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/deposits">
+                                <a href="deposits">
                                     <i class="fa fa-bank fa-fw"></i>Мои инвестиции
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/payin">
+                                <a href="payin">
                                     <i class="fa fa-briefcase fa-fw"></i>Пополнить баланс
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/payout">
+                                <a href="payout">
                                     <i class="fa fa-refresh fa-fw"></i>Вывод средств
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/operations">
+                                <a href="operations">
                                     <i class="fa fa-calendar fa-fw"></i>История операций
                                 </a>
                             </li>
                             <li class="">
-                                <a href="/refsys">
+                                <a href="refsys">
                                     <i class="fa fa-users fa-fw"></i>Партнерская программа
                                 </a>
                             </li>
@@ -94,7 +95,7 @@ if(Yii::$app->user->isGuest) {
                             <!--                                    </ul>-->
                             <!--                                </li>-->
                             <li class="active  current-page">
-                                <a href="/profile">
+                                <a href="profile">
                                     <i class="fa fa-user fa-fw"></i>Профиль
                                 </a>
                             </li>
@@ -191,11 +192,11 @@ if(Yii::$app->user->isGuest) {
                 </div>
                 <div class="x_content">
                     <ul class="nav nav-tabs bar_tabs">
-                        <li role="presentation" class="active"><a href="/profile">Профиль</a></li>
-                        <li role="presentation"><a href="/account">Безопасность</a></li>
-                        <li role="presentation"><a href="/changepass">Изменить пароль</a></li>
-                        <li role="presentation"><a href="/payments">Платежные реквизиты</a></li>
-                        <li role="presentation"><a href="/pin">PIN-Code</a></li>
+                        <li role="presentation" class="active"><a href="profile">Профиль</a></li>
+                        <li role="presentation"><a href="account">Безопасность</a></li>
+                        <li role="presentation"><a href="changepass">Изменить пароль</a></li>
+                        <li role="presentation"><a href="payments">Платежные реквизиты</a></li>
+                        <li role="presentation"><a href="pin">PIN-Code</a></li>
                     </ul>
                     <div class="col-md-6 col-sm-6 col-xs-12 profile_left">
                         <div class="profile_img">
@@ -209,7 +210,7 @@ if(Yii::$app->user->isGuest) {
                         <br>
 
                         <?php
-                        $form = \yii\widgets\ActiveForm::begin([
+                        $form = ActiveForm::begin([
                             'id' => 'profile-form',
                             'enableClientValidation'=>false,
                             'validateOnSubmit'=>false,
@@ -226,44 +227,44 @@ if(Yii::$app->user->isGuest) {
                             echo ' Supported file formats: '.implode(', ', $userpic_settings['allowedExtensions']).'.<br> Maximum file size : '.round($userpic_settings['sizeLimit']/1024/1024, 2).' MB';
                             ?>
                         </p>
-                        <div class="clearfix mb15">
-                            <?= Html::a('Upload a photo', '#', ['id'=>'uploadUserpic', 'class'=>'btn btn-primary pull-right']); ?>
-                            <?php
-                            echo EAjaxUpload::widget([
-                                'id'=>'uploadUserpic',
-                                'config'=>\yii\helpers\ArrayHelper::merge(
-                                    FileUploads::uploadSettings('userpic'),
-                                    [
-                                        'action'=>Url::toRoute(['uploads/upload-file']),
-                                        'onComplete'=>new JsExpression("function(id, fileName, responseJSON){ if(typeof(responseJSON.error)=='undefined') setUserpic(responseJSON); }"),
-                                        'onSubmit'=>new JsExpression("function(id, fileName){ loadUserpic(); }"),
-                                        'messages'=>[
-                                            'typeError'=>'File format error. Supported formats: {extensions}',
-                                            'sizeError'=>'File is too big. Maximum file size: {sizeLimit}',
-                                        ],
-                                        'showMessage'=>new JsExpression("function(message){ errorUserpic(message); }")
-                                    ]
-                                ),
-                                'postParams'=>['imageCropRatio'=>'100,100']
-                            ]);
-                            ?>
-                            <a class="btn btn-gray<?php if(!$modelUser->userpic) echo ' hidden'; ?>" id="del-userpic" href="#">Delete photo</a>
-                        </div>
+<!--                        <div class="clearfix mb15">-->
+<!--                            --><?//= Html::a('Upload a photo', '#', ['id'=>'uploadUserpic', 'class'=>'btn btn-primary pull-right']); ?>
+<!--                            --><?php
+//                            echo EAjaxUpload::widget([
+//                                'id'=>'uploadUserpic',
+//                                'config'=>\yii\helpers\ArrayHelper::merge(
+//                                    FileUploads::uploadSettings('userpic'),
+//                                    [
+//                                        'action'=>Url::toRoute(['uploads/upload-file']),
+//                                        'onComplete'=>new JsExpression("function(id, fileName, responseJSON){ if(typeof(responseJSON.error)=='undefined') setUserpic(responseJSON); }"),
+//                                        'onSubmit'=>new JsExpression("function(id, fileName){ loadUserpic(); }"),
+//                                        'messages'=>[
+//                                            'typeError'=>'File format error. Supported formats: {extensions}',
+//                                            'sizeError'=>'File is too big. Maximum file size: {sizeLimit}',
+//                                        ],
+//                                        'showMessage'=>new JsExpression("function(message){ errorUserpic(message); }")
+//                                    ]
+//                                ),
+//                                'postParams'=>['imageCropRatio'=>'100,100']
+//                            ]);
+//                            ?>
+<!--                            <a class="btn btn-gray--><?php //if(!$modelUser->userpic) echo ' hidden'; ?><!--" id="del-userpic" href="#">Delete photo</a>-->
+<!--                        </div>-->
 
                         <div class="alert hidden" id="userpic-form-error">Upload file error:<ul><li></li></ul></div>
 
-                        <div id="userpic-image-frame" class="text-center mb15">
-                            <?= ViewHelper::imageCropForm('userpic', $modelUser->userpic, 300, 300); ?>
-                        </div>
+<!--                        <div id="userpic-image-frame" class="text-center mb15">-->
+<!--                            --><?//= ViewHelper::imageCropForm('userpic', $modelUser->userpic, 300, 300); ?>
+<!--                        </div>-->
 
                         <div id="userpic-load" class="text-center mb15 form-group hidden" ><img src="/images/loader-big.gif" /></div>
 
-                        <div class="text-center mb15 empty<?php if($modelUser->userpic) echo ' hidden'; ?>" id="userpic_empty">
-                            <?php
-                            $src = ImageHelper::getPicture($modelUser->getDefaultUserpicUrl(), 216, 315);
-                            echo Html::img($src);
-                            ?>
-                        </div>
+<!--                        <div class="text-center mb15 empty--><?php //if($modelUser->userpic) echo ' hidden'; ?><!--" id="userpic_empty">-->
+<!--                            --><?php
+//                            $src = ImageHelper::getPicture($modelUser->getDefaultUserpicUrl(), 216, 315);
+//                            echo Html::img($src);
+//                            ?>
+<!--                        </div>-->
 
 
                         <?= $form->field($modelUser,'name')->textInput() ?>
@@ -283,10 +284,10 @@ if(Yii::$app->user->isGuest) {
 
                         <div class="form-group">
                             <div>
-                                <?= \yii\bootstrap\Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+                                <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
                             </div>
                         </div>
-                        <?php \yii\widgets\ActiveForm::end() ?>
+                        <?php ActiveForm::end() ?>
                     </div>
                 </div>
             </div>
