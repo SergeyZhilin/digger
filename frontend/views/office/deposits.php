@@ -15,7 +15,7 @@ if(Yii::$app->user->isGuest) {
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
                     <a href="#" class="site_title">
-                        <img src="/web/diggerstyle/images/logo-icon.png" alt="">
+                        <img src="/frontend/web/images/logo-icon.png" alt="">
                         <span>Your Site</span>
                     </a>
                 </div>

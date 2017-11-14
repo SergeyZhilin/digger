@@ -6,61 +6,9 @@ $this->title = 'My Yii Application';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">-->
-<!---->
-<!--    <title>Homepage</title>-->
-<!--    <!-- Loading third party fonts -->-->
-<!--    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet" type="text/css">-->
-<!---->
-<!--    <!-- Loading main css file -->-->
-<!---->
-<!---->
-<!--    <!--[if lt IE 9]>-->
-<!---->
-<!--    <![endif]-->-->
-<!---->
-<!--</head>-->
-
 <body>
 
 <div id="site-content">
-
-<!--    <header class="site-header">-->
-<!--        <div class="top-header">-->
-<!--            <div class="container">-->
-<!--                <a href="tel:80049123441">Call Us: (800) 49123441</a>-->
-<!---->
-<!--                <nav class="member-navigation pull-right">-->
-<!--                    <a href="#"><i class="fa fa-user"></i> Register</a>-->
-<!--                    <a href="#"><i class="fa fa-lock"></i> Login</a>-->
-<!--                </nav> <!-- .member-navigation -->-->
-<!--            </div> <!-- .container -->-->
-<!--        </div> <!-- .top-header -->-->
-<!---->
-<!--        <div class="bottom-header">-->
-<!--            <div class="container">-->
-<!--                <a href="index.html" class="branding pull-left">-->
-<!--                    <img src="/frontend/web/images/logo-icon.png" alt="Site title" class="logo-icon">-->
-<!--                    <h1 class="site-title">Company <span>Name</span></h1>-->
-<!--                    <h2 class="site-description">Tagline goes here</h2>-->
-<!--                </a> <!-- #branding -->-->
-<!---->
-<!--                <nav class="main-navigation pull-right">-->
-<!--                    <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>-->
-<!--                    <ul class="menu">-->
-<!--                        <li class="menu-item"><a href="news.html">News</a></li>-->
-<!--                        <li class="menu-item"><a href="about-us.html">About Us</a></li>-->
-<!--                        <li class="menu-item"><a href="services.html">Services</a></li>-->
-<!--                        <li class="menu-item"><a href="contact.html">Contact</a></li>-->
-<!--                    </ul>-->
-<!--                </nav> <!-- .main-navigation -->-->
-<!--            </div> <!-- .container -->-->
-<!--        </div> <!-- .bottom-header -->-->
-<!--    </header> <!-- .site-header -->-->
-
     <main class="content">
         <div class="slider">
             <ul class="slides">

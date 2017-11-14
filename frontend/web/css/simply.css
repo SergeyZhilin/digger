@@ -129,6 +129,20 @@ simply-body {
 .container{
     width: 100% !important;
 }
+.navbar-inverse {
+    background-color: rgb(19, 144, 150);
+    border-color: rgb(19, 144, 150);
+}
+.navbar-inverse .btn-link {
+    color: #515356!important;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: rgba(4, 255, 209, 0.51);
+}
+.navbar-inverse .navbar-brand {
+    color: #515356!important;
+}
 .top_nav{
     display: block;
     float: right;
